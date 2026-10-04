@@ -29,6 +29,17 @@ class Settings(BaseSettings):
     # branco para rodar com um único modelo.
     foundry_model_2: str = ""
 
+    # Modelo de embedding do Foundry (mesmo endpoint/api key dos modelos de chat).
+    # Usado pelo script de ingestão (scripts/ingest.py) e pela tool search_docs
+    # do RAG — sempre o mesmo modelo para indexar e consultar.
+    foundry_model_embeddings: str = ""
+
+    # Banco vetorial (RAG) — Qdrant rodando em container via docker-compose.
+    # "http://localhost:6333" funciona com o agente rodando fora do container
+    # (scripts/start-agent.ps1); dentro do docker-compose, trocar para
+    # "http://qdrant:6333" (nome do serviço vira hostname na rede interna).
+    qdrant_url: str = "http://localhost:6333"
+
     # Diretório de dados do runtime do Copilot SDK (sessões, config, etc.).
     # Isolado do perfil pessoal do desenvolvedor (~/.copilot) para que o agente do
     # workshop não herde MCP servers, extensões ou credenciais de outros projetos.
