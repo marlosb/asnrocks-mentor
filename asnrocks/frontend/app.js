@@ -1,0 +1,215 @@
+/**
+ * Frontend do Mentor: chat com streaming via SSE.
+ * JavaScript puro (ES2022), sem dependências externas.
+ */
+
+const chatForm = document.getElementById("chat-form");
+const campoMensagem = document.getElementById("mensagem");
+const listaMensagens = document.getElementById("mensagens");
+
+/** Bolha do agente em construção durante o streaming da resposta atual. */
+let bolhaResposta = null;
+/** Texto markdown acumulado da resposta em construção (os deltas chegam em partes). */
+let textoRespostaAtual = "";
+
+const PADRAO_INLINE = /`([^`]+)`|\*\*([^*]+)\*\*|__([^_]+)__|\*([^*]+)\*|_([^_]+)_/g;
+const PADRAO_ITEM_LISTA = /^\s*([-*]|\d+\.)\s+/;
+const PADRAO_CABECALHO = /^(#{1,6})\s+(.*)/;
+
+/**
+ * Renderiza negrito/itálico/código inline dentro de um elemento, criando nós
+ * DOM diretamente (sem innerHTML) — conteúdo do agente é dado não confiável.
+ */
+function renderizarInline(container, texto) {
+  PADRAO_INLINE.lastIndex = 0;
+  let ultimoIndice = 0;
+  let resultado;
+  while ((resultado = PADRAO_INLINE.exec(texto)) !== null) {
+    if (resultado.index > ultimoIndice) {
+      container.appendChild(document.createTextNode(texto.slice(ultimoIndice, resultado.index)));
+    }
+    const [, codigo, negrito1, negrito2, italico1, italico2] = resultado;
+    let elemento;
+    if (codigo !== undefined) {
+      elemento = document.createElement("code");
+      elemento.textContent = codigo;
+    } else if (negrito1 !== undefined || negrito2 !== undefined) {
+      elemento = document.createElement("strong");
+      elemento.textContent = negrito1 ?? negrito2;
+    } else {
+      elemento = document.createElement("em");
+      elemento.textContent = italico1 ?? italico2;
+    }
+    container.appendChild(elemento);
+    ultimoIndice = PADRAO_INLINE.lastIndex;
+  }
+  if (ultimoIndice < texto.length) {
+    container.appendChild(document.createTextNode(texto.slice(ultimoIndice)));
+  }
+}
+
+/** Dentro de um parágrafo, uma quebra de linha simples vira `<br>`. */
+function renderizarParagrafo(container, texto) {
+  const linhas = texto.split("\n");
+  linhas.forEach((linha, indice) => {
+    renderizarInline(container, linha);
+    if (indice < linhas.length - 1) {
+      container.appendChild(document.createElement("br"));
+    }
+  });
+}
+
+/**
+ * Converte um subconjunto simples de markdown (parágrafos, cabeçalhos, listas,
+ * blocos de código, negrito/itálico/código inline) em nós DOM. Não usa
+ * innerHTML em nenhum momento.
+ */
+function renderizarMarkdown(container, texto) {
+  container.textContent = "";
+  const linhas = texto.split("\n");
+  let i = 0;
+  while (i < linhas.length) {
+    const linha = linhas[i];
+
+    if (linha.trim() === "") {
+      i++;
+      continue;
+    }
+
+    if (linha.trim().startsWith("```")) {
+      i++;
+      const codigoLinhas = [];
+      while (i < linhas.length && !linhas[i].trim().startsWith("```")) {
+        codigoLinhas.push(linhas[i]);
+        i++;
+      }
+      i++; // pula a cerca de fechamento
+      const pre = document.createElement("pre");
+      const code = document.createElement("code");
+      code.textContent = codigoLinhas.join("\n");
+      pre.appendChild(code);
+      container.appendChild(pre);
+      continue;
+    }
+
+    const cabecalho = linha.match(PADRAO_CABECALHO);
+    if (cabecalho) {
+      const nivel = Math.min(cabecalho[1].length + 2, 6);
+      const elemento = document.createElement(`h${nivel}`);
+      renderizarInline(elemento, cabecalho[2]);
+      container.appendChild(elemento);
+      i++;
+      continue;
+    }
+
+    if (PADRAO_ITEM_LISTA.test(linha)) {
+      const ordenada = /^\s*\d+\./.test(linha);
+      const lista = document.createElement(ordenada ? "ol" : "ul");
+      while (i < linhas.length && PADRAO_ITEM_LISTA.test(linhas[i])) {
+        const item = document.createElement("li");
+        renderizarInline(item, linhas[i].replace(PADRAO_ITEM_LISTA, ""));
+        lista.appendChild(item);
+        i++;
+      }
+      container.appendChild(lista);
+      continue;
+    }
+
+    const paragrafoLinhas = [];
+    while (
+      i < linhas.length &&
+      linhas[i].trim() !== "" &&
+      !linhas[i].trim().startsWith("```") &&
+      !PADRAO_ITEM_LISTA.test(linhas[i]) &&
+      !PADRAO_CABECALHO.test(linhas[i])
+    ) {
+      paragrafoLinhas.push(linhas[i]);
+      i++;
+    }
+    const paragrafo = document.createElement("p");
+    renderizarParagrafo(paragrafo, paragrafoLinhas.join("\n"));
+    container.appendChild(paragrafo);
+  }
+}
+
+function criarBolha(remetente) {
+  const bolha = document.createElement("div");
+  bolha.className = `bolha bolha--${remetente}`;
+  listaMensagens.appendChild(bolha);
+  listaMensagens.scrollTop = listaMensagens.scrollHeight;
+  return bolha;
+}
+
+function tratarEvento(evento) {
+  switch (evento.tipo) {
+    case "assistant.message_delta": {
+      if (!bolhaResposta) {
+        bolhaResposta = criarBolha("agente");
+        textoRespostaAtual = "";
+      }
+      textoRespostaAtual += evento.dados?.deltaContent ?? "";
+      renderizarMarkdown(bolhaResposta, textoRespostaAtual);
+      listaMensagens.scrollTop = listaMensagens.scrollHeight;
+      break;
+    }
+    case "assistant.message": {
+      if (!bolhaResposta) {
+        bolhaResposta = criarBolha("agente");
+      }
+      textoRespostaAtual = evento.dados?.content ?? "";
+      renderizarMarkdown(bolhaResposta, textoRespostaAtual);
+      break;
+    }
+    case "session.idle": {
+      bolhaResposta = null;
+      textoRespostaAtual = "";
+      break;
+    }
+    case "session.error": {
+      bolhaResposta = null;
+      const erro = criarBolha("sistema");
+      const dados = evento.dados ?? {};
+      const partes = [dados.message ?? "falha desconhecida"];
+      if (dados.statusCode) partes.push(`status ${dados.statusCode}`);
+      if (dados.errorCode) partes.push(`código ${dados.errorCode}`);
+      if (dados.url) partes.push(dados.url);
+      erro.textContent = `Erro no agente: ${partes.join(" — ")}`;
+      break;
+    }
+    default:
+      break;
+  }
+}
+
+function conectarEventos() {
+  const fonte = new EventSource("/events");
+  fonte.onmessage = (mensagem) => {
+    tratarEvento(JSON.parse(mensagem.data));
+  };
+}
+
+async function enviarMensagem(texto) {
+  const bolha = criarBolha("aluno");
+  bolha.textContent = texto;
+
+  const resposta = await fetch("/chat", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ mensagem: texto }),
+  });
+
+  if (!resposta.ok) {
+    const erro = criarBolha("sistema");
+    erro.textContent = "Não foi possível enviar a mensagem ao Mentor.";
+  }
+}
+
+chatForm.addEventListener("submit", (evento) => {
+  evento.preventDefault();
+  const texto = campoMensagem.value.trim();
+  if (!texto) return;
+  campoMensagem.value = "";
+  enviarMensagem(texto);
+});
+
+conectarEventos();
