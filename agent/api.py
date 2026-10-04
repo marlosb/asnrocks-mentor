@@ -1,12 +1,11 @@
-"""API FastAPI que encapsula a sessão do agente.
+"""API FastAPI que encapsula a sessão do agente Mentor.
 
 Expõe `POST /chat` para enviar mensagens e `GET /events` como Server-Sent Events,
 transmitindo em tempo real as respostas do agente (e, nos módulos seguintes, os
 eventos de uso de tools) para o painel do frontend.
 
-Neste módulo o agente ainda não tem um prompt de sistema nem a persona do Mentor
-(isso chega no módulo 2) — é o mesmo agente genérico do `agent/main.py`, só que
-acessível via API e com streaming para o frontend.
+A partir do módulo 2, a sessão carrega a persona do Mentor a partir de
+`agent/prompts/mentor.system.md`.
 """
 
 from __future__ import annotations
@@ -30,6 +29,7 @@ from agent.config import settings
 
 logger = logging.getLogger(__name__)
 
+PROMPT_SISTEMA_PATH = Path(__file__).parent / "prompts" / "mentor.system.md"
 FRONTEND_DIR = Path(__file__).parent.parent / "frontend"
 
 
@@ -44,6 +44,13 @@ class EstadoAgente:
 
 
 estado = EstadoAgente()
+
+
+def _carregar_prompt_sistema() -> str:
+    """Lê o prompt do Mentor, descartando o frontmatter YAML inicial."""
+    texto = PROMPT_SISTEMA_PATH.read_text(encoding="utf-8")
+    partes = texto.split("---", 2)
+    return partes[2].strip() if len(partes) == 3 else texto.strip()
 
 
 def _serializar_evento(event: object) -> dict:
@@ -88,6 +95,7 @@ async def lifespan(app: FastAPI) -> AsyncIterator[None]:
             "wire_api": "responses",
         },
         streaming=True,
+        system_message={"mode": "append", "content": _carregar_prompt_sistema()},
     )
     session.on(_transmitir_para_assinantes)
 
@@ -103,7 +111,7 @@ async def lifespan(app: FastAPI) -> AsyncIterator[None]:
         await client.stop()
 
 
-app = FastAPI(title="Mentor - agente (módulo 1)", lifespan=lifespan)
+app = FastAPI(title="Mentor", lifespan=lifespan)
 
 
 class MensagemChat(BaseModel):
