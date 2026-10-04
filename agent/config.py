@@ -24,6 +24,11 @@ class Settings(BaseSettings):
     foundry_api_key: str = ""
     foundry_model: str = "gpt-4o"
 
+    # Segundo modelo opcional, no mesmo endpoint e com a mesma api key — permite
+    # comparar respostas de modelos diferentes no dropdown do frontend. Deixe em
+    # branco para rodar com um único modelo.
+    foundry_model_2: str = ""
+
     # Diretório de dados do runtime do Copilot SDK (sessões, config, etc.).
     # Isolado do perfil pessoal do desenvolvedor (~/.copilot) para que o agente do
     # workshop não herde MCP servers, extensões ou credenciais de outros projetos.
@@ -53,6 +58,13 @@ class Settings(BaseSettings):
                 )
                 return restante
         return normalizado
+
+    def modelos_disponiveis(self) -> list[str]:
+        """Lista dos modelos configurados, compartilhando a mesma api key."""
+        modelos = [self.foundry_model]
+        if self.foundry_model_2:
+            modelos.append(self.foundry_model_2)
+        return modelos
 
 
 settings = Settings()

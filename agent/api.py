@@ -5,7 +5,8 @@ transmitindo em tempo real as respostas do agente (e, nos módulos seguintes, os
 eventos de uso de tools) para o painel do frontend.
 
 A partir do módulo 2, a sessão carrega a persona do Mentor a partir de
-`agent/prompts/mentor.system.md`.
+`agent/prompts/mentor.system.md`. Quando um segundo modelo está configurado
+(`FOUNDRY_MODEL_2`), o frontend mostra um seletor para trocar o modelo ativo.
 """
 
 from __future__ import annotations
@@ -39,8 +40,11 @@ class EstadoAgente:
     def __init__(self) -> None:
         self.client: CopilotClient | None = None
         self.session: CopilotSession | None = None
+        self.modelo_atual: str = ""
         self.assinantes: set[asyncio.Queue[dict]] = set()
         self.encerrando: asyncio.Event = asyncio.Event()
+        # Protege a troca de modelo contra mensagens enviadas no meio da troca.
+        self.lock: asyncio.Lock = asyncio.Lock()
 
 
 estado = EstadoAgente()
@@ -81,13 +85,11 @@ def _transmitir_para_assinantes(event: object) -> None:
         fila.put_nowait(payload)
 
 
-@asynccontextmanager
-async def lifespan(app: FastAPI) -> AsyncIterator[None]:
-    client = CopilotClient(base_directory=settings.copilot_home)
-    await client.start()
+async def _criar_sessao(client: CopilotClient, modelo: str) -> CopilotSession:
+    """Abre uma sessão para o modelo indicado, já com a persona do Mentor."""
     session = await client.create_session(
         on_permission_request=PermissionHandler.approve_all,
-        model=settings.foundry_model,
+        model=modelo,
         provider={
             "type": "azure",
             "base_url": settings.foundry_base_url,
@@ -98,9 +100,18 @@ async def lifespan(app: FastAPI) -> AsyncIterator[None]:
         system_message={"mode": "append", "content": _carregar_prompt_sistema()},
     )
     session.on(_transmitir_para_assinantes)
+    return session
+
+
+@asynccontextmanager
+async def lifespan(app: FastAPI) -> AsyncIterator[None]:
+    client = CopilotClient(base_directory=settings.copilot_home)
+    await client.start()
+    session = await _criar_sessao(client, settings.foundry_model)
 
     estado.client = client
     estado.session = session
+    estado.modelo_atual = settings.foundry_model
     try:
         yield
     finally:
@@ -121,10 +132,44 @@ class MensagemChat(BaseModel):
 @app.post("/chat")
 async def chat(corpo: MensagemChat) -> dict:
     """Envia a mensagem do aluno para a sessão. A resposta chega via /events."""
-    if estado.session is None:
+    async with estado.lock:
+        session = estado.session
+    if session is None:
         return {"erro": "sessão ainda não iniciada", "sugestao": "tente novamente em instantes"}
-    await estado.session.send(corpo.mensagem)
+    await session.send(corpo.mensagem)
     return {"status": "enviado"}
+
+
+@app.get("/modelos")
+async def modelos() -> dict:
+    """Lista os modelos configurados e qual deles está ativo na sessão atual."""
+    return {"modelos": settings.modelos_disponiveis(), "atual": estado.modelo_atual}
+
+
+class TrocaModelo(BaseModel):
+    modelo: str
+
+
+@app.post("/modelo")
+async def trocar_modelo(corpo: TrocaModelo) -> dict:
+    """Encerra a sessão atual e abre uma nova com o modelo escolhido."""
+    disponiveis = settings.modelos_disponiveis()
+    if corpo.modelo not in disponiveis:
+        return {
+            "erro": "modelo desconhecido",
+            "sugestao": f"escolha um entre: {', '.join(disponiveis)}",
+        }
+    if estado.client is None:
+        return {"erro": "cliente ainda não iniciado", "sugestao": "tente novamente em instantes"}
+
+    async with estado.lock:
+        sessao_antiga = estado.session
+        estado.session = await _criar_sessao(estado.client, corpo.modelo)
+        estado.modelo_atual = corpo.modelo
+        if sessao_antiga is not None:
+            await sessao_antiga.disconnect()
+
+    return {"status": "trocado", "modelo": corpo.modelo}
 
 
 @app.get("/events")
