@@ -8,8 +8,10 @@ A partir do módulo 2, a sessão carrega a persona do Mentor a partir de
 `agent/prompts/mentor.system.md`. Quando um segundo modelo está configurado
 (`FOUNDRY_MODEL_2`), o frontend mostra um seletor para trocar o modelo ativo.
 A partir do módulo 4, a sessão também carrega as skills de `.github/skills/`.
-Nenhuma outra tool embutida (busca na web, bash, etc.) é liberada: cada módulo
-futuro habilita explicitamente só o que precisa, em `available_tools`.
+A partir do módulo 5, a sessão também tem as tools `buscar_na_web` e
+`ler_pagina_web` (`agent/tools/web.py`). Nenhuma outra tool embutida (bash,
+etc.) é liberada: cada módulo futuro habilita explicitamente só o que precisa,
+em `available_tools`.
 """
 
 from __future__ import annotations
@@ -30,6 +32,7 @@ from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
 
 from agent.config import settings
+from agent.tools.web import criar_tools
 
 logger = logging.getLogger(__name__)
 
@@ -104,10 +107,12 @@ async def _criar_sessao(client: CopilotClient, modelo: str) -> CopilotSession:
         system_message={"mode": "append", "content": _carregar_prompt_sistema()},
         enable_skills=True,
         skill_directories=[str(SKILLS_DIR)],
-        # Nenhuma tool embutida (busca na web, bash, etc.) fica disponível ainda;
-        # só a skill já ensinada no módulo 4. Módulos seguintes liberam o resto
-        # explicitamente, uma de cada vez.
-        available_tools=ToolSet().add_builtin("skill"),
+        tools=criar_tools(),
+        # Nenhuma tool embutida além da skill (bash, etc.) fica disponível ainda;
+        # os módulos seguintes liberam o resto explicitamente, uma de cada vez.
+        available_tools=(
+            ToolSet().add_builtin("skill").add_custom("buscar_na_web").add_custom("ler_pagina_web")
+        ),
     )
     session.on(_transmitir_para_assinantes)
     return session
