@@ -1,0 +1,58 @@
+"""Configuração central do agente, lida uma única vez a partir de variáveis de ambiente."""
+
+from __future__ import annotations
+
+import logging
+
+from pydantic import field_validator
+from pydantic_settings import BaseSettings, SettingsConfigDict
+
+logger = logging.getLogger(__name__)
+
+# Sufixos de rota que às vezes acabam colados no endpoint por engano: o provider
+# "azure" do SDK monta o caminho sozinho e exige apenas o host.
+_SUFIXOS_ROTA_INDEVIDOS = ("/openai/v1/responses", "/openai/v1", "/responses")
+
+
+class Settings(BaseSettings):
+    """Configurações do agente Mentor, carregadas de variáveis de ambiente ou `.env`."""
+
+    model_config = SettingsConfigDict(env_file=".env", env_file_encoding="utf-8", extra="ignore")
+
+    # Microsoft Foundry (endpoint OpenAI-compatível, BYOK)
+    foundry_base_url: str = "https://localhost"
+    foundry_api_key: str = ""
+    foundry_model: str = "gpt-4o"
+
+    # Diretório de dados do runtime do Copilot SDK (sessões, config, etc.).
+    # Isolado do perfil pessoal do desenvolvedor (~/.copilot) para que o agente do
+    # workshop não herde MCP servers, extensões ou credenciais de outros projetos.
+    copilot_home: str = ".copilot-home"
+
+    # API do agente
+    app_host: str = "0.0.0.0"
+    app_port: int = 8000
+
+    @field_validator("foundry_base_url")
+    @classmethod
+    def _normalizar_base_url(cls, valor: str) -> str:
+        """Remove barra final e sufixos de rota (`/openai/v1`, `/responses`, ...).
+
+        O provider "azure" do SDK espera só o host e monta o caminho sozinho;
+        incluir a rota aqui causa erros confusos (ex.: resposta 400 tratando
+        "responses" como um ID de resposta).
+        """
+        normalizado = valor.rstrip("/")
+        for sufixo in _SUFIXOS_ROTA_INDEVIDOS:
+            if normalizado.endswith(sufixo):
+                restante = normalizado[: -len(sufixo)]
+                logger.warning(
+                    "FOUNDRY_BASE_URL continha o sufixo '%s'; usando apenas o host: %s",
+                    sufixo,
+                    restante,
+                )
+                return restante
+        return normalizado
+
+
+settings = Settings()

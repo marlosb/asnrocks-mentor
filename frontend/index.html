@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <title>Mentor</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Mentor</h1>
+      <p>Tutor de ciência de dados e IA — workshop "Construindo um agente de IA na prática"</p>
+    </header>
+
+    <main>
+      <section class="chat">
+        <div id="mensagens" class="mensagens" aria-live="polite"></div>
+        <form id="chat-form" class="chat-form">
+          <input
+            id="mensagem"
+            type="text"
+            autocomplete="off"
+            placeholder="Pergunte algo ao Mentor..."
+          />
+          <button type="submit">Enviar</button>
+        </form>
+      </section>
+    </main>
+
+    <script type="module" src="app.js"></script>
+  </body>
+</html>
