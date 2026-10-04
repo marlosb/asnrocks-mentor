@@ -47,6 +47,25 @@ class Settings(BaseSettings):
     sandbox_container_name: str = "mentor-sandbox"
     sandbox_timeout_segundos: int = 20
 
+    # Servidor MCP do Playwright (módulo 6d). Expõe tools de navegação/leitura de
+    # páginas ao agente via protocolo MCP (HTTP). "http://localhost:8931/mcp"
+    # funciona com o agente rodando fora do container (scripts/start-agent.ps1);
+    # dentro do docker-compose, trocar para "http://mcp-playwright:8931/mcp".
+    playwright_mcp_url: str = "http://localhost:8931/mcp"
+
+    # Lista de domínios permitidos para a navegação via Playwright (módulo 6d),
+    # separados por vírgula. Um subdomínio de um domínio da lista também é
+    # permitido (ex.: "docs.python.org" cobre "wiki.python.org" não, mas
+    # "python.org" cobre "docs.python.org"). A checagem é feita em
+    # agent/hooks.py, nunca pelas flags --allowed-origins/--blocked-origins do
+    # próprio Playwright MCP (o projeto não as considera uma fronteira de
+    # segurança — ver documentação oficial do servidor).
+    dominios_permitidos_navegador: str = (
+        "wikipedia.org,python.org,pypi.org,github.com,raw.githubusercontent.com,"
+        "scikit-learn.org,pytorch.org,numpy.org,pandas.pydata.org,matplotlib.org,"
+        "developer.mozilla.org,stackoverflow.com"
+    )
+
     # Diretório de dados do runtime do Copilot SDK (sessões, config, etc.).
     # Isolado do perfil pessoal do desenvolvedor (~/.copilot) para que o agente do
     # workshop não herde MCP servers, extensões ou credenciais de outros projetos.
@@ -83,6 +102,14 @@ class Settings(BaseSettings):
         if self.foundry_model_2:
             modelos.append(self.foundry_model_2)
         return modelos
+
+    def lista_dominios_permitidos_navegador(self) -> list[str]:
+        """Domínios liberados para navegação, em minúsculas e sem espaços."""
+        return [
+            dominio.strip().lower()
+            for dominio in self.dominios_permitidos_navegador.split(",")
+            if dominio.strip()
+        ]
 
 
 settings = Settings()

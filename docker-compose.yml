@@ -13,6 +13,7 @@ services:
     depends_on:
       - qdrant
       - sandbox
+      - mcp-playwright
 
   # Banco vetorial usado pelo RAG (módulo 6a). Exposto também na máquina host
   # (localhost:6333) para que o agente rodando fora do container (via
@@ -43,6 +44,35 @@ services:
       - no-new-privileges:true
     mem_limit: 512m
     cpus: 1.0
+
+  # Servidor MCP do Playwright (módulo 6d), oficial da Microsoft. Roda headless
+  # (nunca abre uma janela, dentro ou fora do container) e devolve snapshots de
+  # acessibilidade estruturados ao agente. --no-sandbox desativa o sandbox
+  # interno do Chromium (que exige capabilities extras) porque o próprio
+  # container já é a fronteira de isolamento. A allowlist de domínios de
+  # verdade fica em agent/hooks.py: o Playwright MCP não trata suas próprias
+  # flags de origem como uma fronteira de segurança.
+  mcp-playwright:
+    image: mcr.microsoft.com/playwright/mcp:latest
+    container_name: mentor-mcp-playwright
+    entrypoint: node
+    command:
+      - "/app/cli.js"
+      - "--headless"
+      - "--browser=chromium"
+      - "--no-sandbox"
+      - "--isolated"
+      - "--host=0.0.0.0"
+      - "--port=8931"
+    ports:
+      - "8931:8931"
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+    mem_limit: 1g
+    cpus: 1.0
+    shm_size: "1gb"
 
 volumes:
   qdrant_data:

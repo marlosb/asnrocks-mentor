@@ -13,9 +13,12 @@ A partir do módulo 5, a sessão também tem as tools `buscar_na_web` e
 também tem a tool `search_docs` (`agent/tools/rag.py`), que busca no acervo de
 aulas indexado no Qdrant. A partir do módulo 6c, a sessão também tem a tool
 `run_python` (`agent/tools/sandbox.py`), que executa código em um container
-isolado via `docker exec`. Nenhuma outra tool embutida (bash, etc.) é
-liberada: cada módulo futuro habilita explicitamente só o que precisa, em
-`available_tools`.
+isolado via `docker exec`. A partir do módulo 6d, a sessão também se conecta
+ao servidor MCP do Playwright (`agent/config.py:playwright_mcp_url`) com um
+conjunto mínimo de tools de navegação/leitura; `agent/hooks.py` bloqueia, via
+`on_pre_tool_use`, qualquer navegação para fora da allowlist de domínios.
+Nenhuma outra tool embutida (bash, etc.) é liberada: cada módulo futuro
+habilita explicitamente só o que precisa, em `available_tools`.
 """
 
 from __future__ import annotations
@@ -36,6 +39,7 @@ from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
 
 from agent.config import settings
+from agent.hooks import on_pre_tool_use
 from agent.tools.rag import criar_tools as criar_tools_rag
 from agent.tools.sandbox import criar_tools as criar_tools_sandbox
 from agent.tools.web import criar_tools as criar_tools_web
@@ -43,6 +47,20 @@ from agent.tools.web import criar_tools as criar_tools_web
 logger = logging.getLogger(__name__)
 
 PROMPT_SISTEMA_PATH = Path(__file__).parent / "prompts" / "mentor.system.md"
+
+# Tools do servidor MCP do Playwright (módulo 6d) liberadas para o Mentor: só
+# navegação e leitura (nunca clique, digitação, upload de arquivo ou execução
+# de JavaScript). A allowlist de domínios de `agent/hooks.py` ainda se aplica
+# por cima disso a toda chamada de navegação.
+_TOOLS_PLAYWRIGHT = [
+    "browser_navigate",
+    "browser_navigate_back",
+    "browser_snapshot",
+    "browser_find",
+    "browser_wait_for",
+    "browser_tabs",
+    "browser_close",
+]
 FRONTEND_DIR = Path(__file__).parent.parent / "frontend"
 SKILLS_DIR = Path(__file__).parent.parent / ".github" / "skills"
 
@@ -112,6 +130,21 @@ def _publicar_imagens_sandbox(imagens: list[str]) -> None:
         fila.put_nowait(payload)
 
 
+def _tools_liberadas() -> ToolSet:
+    """Monta a allowlist de tools da sessão (`add_mcp` só aceita um nome por vez)."""
+    conjunto = (
+        ToolSet()
+        .add_builtin("skill")
+        .add_custom("buscar_na_web")
+        .add_custom("ler_pagina_web")
+        .add_custom("search_docs")
+        .add_custom("run_python")
+    )
+    for nome in _TOOLS_PLAYWRIGHT:
+        conjunto.add_mcp(f"playwright-{nome}")
+    return conjunto
+
+
 async def _criar_sessao(client: CopilotClient, modelo: str) -> CopilotSession:
     """Abre uma sessão para o modelo indicado, já com a persona do Mentor."""
     session = await client.create_session(
@@ -132,16 +165,22 @@ async def _criar_sessao(client: CopilotClient, modelo: str) -> CopilotSession:
             *criar_tools_rag(),
             *criar_tools_sandbox(publicar_imagens=_publicar_imagens_sandbox),
         ],
+        # Servidor MCP do Playwright (módulo 6d), rodando em container próprio
+        # (docker-compose.yml, serviço mcp-playwright). "tools" aqui restringe,
+        # do lado do servidor MCP, quais tools ele sequer anuncia; a allowlist
+        # de domínios (agent/hooks.py) restringe, do lado do agente, para onde
+        # essas tools podem navegar.
+        mcp_servers={
+            "playwright": {
+                "type": "http",
+                "url": settings.playwright_mcp_url,
+                "tools": _TOOLS_PLAYWRIGHT,
+            }
+        },
+        hooks={"on_pre_tool_use": on_pre_tool_use},
         # Nenhuma tool embutida além da skill (bash, etc.) fica disponível ainda;
         # os módulos seguintes liberam o resto explicitamente, uma de cada vez.
-        available_tools=(
-            ToolSet()
-            .add_builtin("skill")
-            .add_custom("buscar_na_web")
-            .add_custom("ler_pagina_web")
-            .add_custom("search_docs")
-            .add_custom("run_python")
-        ),
+        available_tools=_tools_liberadas(),
     )
     session.on(_transmitir_para_assinantes)
     return session

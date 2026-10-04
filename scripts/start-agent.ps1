@@ -34,10 +34,10 @@ Get-Content $SecretsFile | ForEach-Object {
 
 Push-Location $raizProjeto
 try {
-    Write-Host "Subindo o Qdrant e o sandbox de execução Python via docker compose..."
-    docker compose up -d qdrant sandbox
+    Write-Host "Subindo o Qdrant, o sandbox de execução Python e o MCP do Playwright via docker compose..."
+    docker compose up -d qdrant sandbox mcp-playwright
     if ($LASTEXITCODE -ne 0) {
-        Write-Error "Falha ao subir Qdrant/sandbox. Verifique se o Docker Desktop está em execução."
+        Write-Error "Falha ao subir Qdrant/sandbox/mcp-playwright. Verifique se o Docker Desktop está em execução."
         exit 1
     }
 
@@ -56,7 +56,7 @@ try {
     & uv @args
 }
 finally {
-    Write-Host "Encerrando o Qdrant e o sandbox..."
-    docker compose stop qdrant sandbox
+    Write-Host "Encerrando o Qdrant, o sandbox e o mcp-playwright..."
+    docker compose stop qdrant sandbox mcp-playwright
     Pop-Location
 }
