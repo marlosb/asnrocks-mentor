@@ -34,6 +34,13 @@ Get-Content $SecretsFile | ForEach-Object {
 
 Push-Location $raizProjeto
 try {
+    Write-Host "Subindo o Qdrant (banco vetorial do RAG) via docker compose..."
+    docker compose up -d qdrant
+    if ($LASTEXITCODE -ne 0) {
+        Write-Error "Falha ao subir o Qdrant. Verifique se o Docker Desktop está em execução."
+        exit 1
+    }
+
     $args = @(
         "run", "uvicorn", "agent.api:app",
         "--host", "0.0.0.0",
@@ -49,5 +56,7 @@ try {
     & uv @args
 }
 finally {
+    Write-Host "Encerrando o Qdrant..."
+    docker compose stop qdrant
     Pop-Location
 }

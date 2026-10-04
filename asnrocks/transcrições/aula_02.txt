@@ -1,0 +1,567 @@
+É... Fechou, muito obrigada, e eu já tô com o comando aqui também, beleza. E aí, Léo, tudo bem? Boa noite, Pedro.
+Boa noite.
+Já falei, Vi já falei, bem-vindos de volta. Fernando tá entrando, perfeito.
+Rodrigo, só vou deixar a câmera fechada aqui por 10 minutinhos, só pra eu poder jantar.
+Tá bom, tá bom. E não tem problema vocês comerem na câmera não, tá, gente? A não ser que vocês se sintam desconfortáveis, porque vocês vão me ver comendo em algumas aulas também, tá? Então...
+Vai dar inveja no pessoal aí, aí é melhor deixar fechado.
+Fique à vontade, mas depois ligue de volta.
+Dependendo da comida.
+Ont- ontem eu tava jantando sem, sem vergonha nenhuma.
+É, eu também faço muito isso. Vocês vão me ver quando eu tiver na aula de algum outro professor, eu taco de pau e como na frente mesmo. Muito bem, Fernando, bem-vindo. E aí eu tô vendo que o pessoal tá entrando. Bom, já estamos gravando, já começamos, sempre 7 horas eu já vou dar o play e a gente começa. É... que que é o nosso objetivo hoje? O nosso objetivo hoje, eu vou fazer uma pequena e rápida revisão sobre o que nós falamos no encontro passado. A gente vai se dividir em grupos novamente, vocês vão fazer mais uma sessão de networking com outras pessoas que não as que vocês cruzaram na aula passada. E aí, na volta, a gente vai discutir o que caralho eu começo com meus palavrões, né? Mas o que caralho são aquelas imagens, o que que eu quis dizer com aquilo, e a gente começa a introduzir já alguns conceitos. E como eu comentei com vocês na entrevista, eh, eu gosto muito de mostrar pontos de vistas diferentes, porque vocês vão ouvir muito da minha boca eu dizer que ninguém é Deus, eu não sou Deus, vocês não são Deus, então ninguém sabe o que é a definição do perfeito, do certo, mas a gente tem as nossas convicções e a gente defende elas de por nossos pontos de vistas. Então, a gente vai discutir um pouco sobre esse questionamento, né, sobre esse ponto, e vamos começar a introduzir os temas que nós vamos abordar, falando numa visão macro. Então, hoje a gente tem a missão aí de entender alguns termos mais antigos, porque eu vou voltar um pouco pra história, então a gente vai discutir o tal do CRISP-DM. Eu tô mutando algumas, alguns microfones vazando, tá, gente? Eh, a gente vai discutir o tal do CRISP-DM, uma visão que a IBM colocava, que o SAS colocava, e aí a gente vai caminhando pras, pras, pras formas como a gente trabalha nas atualidades aí, nos, nos dias mais modernos. Muito bem, o que que nós falamos na aula passada? Na aula passada, a gente começou falando sobre avisos, regras, e aqui eu já quero começar falando com vocês sobre o Moodle. Todos tiveram a oportunidade de entrar? Não foram todos que responderam o feedback, então por isso que me vem essa pergunta. Todos tiveram a oportunidade de entrar e viram lá a, o material. Ah, Valéria é uma boa. Gente, ó, a Valéria, ela foi aniversário dela na aula passada, e aí ela não esteve presente porque ela estava tomando um vinho com a família e dormiu 8 e meia da noite. Maravilhosa. E aí ela, então hoje é o primeiro dia dela. Valéria, seja muito bem-vinda e você vai entender o que a gente vai fazer hoje. Você vai fazer uma sessão de networking aí com alguns colegas também. Ah, então ela tá um pouco perdida em relação a isso. Valéria, eu vou pedir pra Alê e a Mabê, que estão aqui e vão ser tratadas também como alunas, na verdade elas trabalham comigo e elas me ajudam aqui durante as aulas. Então elas, inclusive, são as pessoas que você pode procurar caso tenha algum tipo de angústia, sofrimento e comigo também. E aí eu vou pedir pra elas te mandarem aqui no chat o link do Moodle, porque naquela época que você fez o curso com a gente era outra plataforma que a gente usava. Então é o mesmo Moodle, só que agora é um outro local, então você vai ter que realizar o seu login novamente. E aí você já testa a sua entrada e avisa as meninas aqui pelo chat se tiver algum problema, combinado? Vamos lá, alguém não teve a oportunidade de entrar ou todo mundo entrou e viu lá como que tá ficando o nosso esquema? Todo mundo tá suave sobre o Moodle? Sim? Então olha lá, gente, essa vai ser a nossa rotina e aqui eu já aproveito e respondo uma pergunta que me fizeram lá na hora do dos feedbacks. É, isso daqui é uma novidade, a gente não tinha feito isso nas outras turmas e, baseado nas sugestões que eles deram, a gente criou esse formato e eu acredito que vai ser muito funcional. O meu não consegui abrir aqui, mas na hora que vocês abrirem, vocês vão ver que nada mais é do que uma planilha da qual tenha lá a data, é a o tema da aula em questão, então aqui no caso foi a nossa aula zero, é... quem é o professor, a abreviação que a gente usa, que isso vai ser usado para os nomes dos arquivos. Vocês têm um resumo escrito do que foi dito, e esse resumo também aparece aqui. Então, isso é uma forma de vocês darem o control E, o control F e procurarem pelo que vocês quiserem ali dentro, para facilitar um pouco a vida de vocês. E o link da gravação e o link do resumo. Vocês viram também agora que a gente vai fornecer pra vocês um resumo do que foi tratado na aula. Então isso é pra facilitar vocês. Aqui é pra minimizar o se ferrar, né? Porque o curso vai ser longo, vai ser extenso, vai ter muito conteúdo, então isso aqui é um facilitador. E aí esse resumo, gente, quem vai desenvolver ele vai ser a Le e a Mabê, que são as meninas aqui do meu time. Então, se porventura você encontrar alguma coisa, algum errinho, alguma coisa que deixou passar, por favor, chame elas e fale: cara, isso aqui tá escrito errado, isso daqui tá não sei o que lá, pra que a gente possa fazer os ajustes, combinado? Então aqui a gente vai trabalhar em time. Se porventura você entende que, ah, esse resumo poderia ter uma informação a mais, você entra em contato com elas e sugere: ah, isso acho que seria legal colocar isso daqui, e aí elas vão fazendo as adições. A gente tem que ter em mente que essa la- esse lance do resumo é meio que de aluno para aluno, porque elas são alunas e vão trabalhar em cima disso, e vocês podem sofisticar isso, tá bem? E isso é bom porque aí vocês guardam e fica de material aí pra pra suporte pra vocês. Além do resumo, vocês vão ter também o material da aula. Eventualmente, vocês vão ver professores que preferem passar o material completo de uma vez, e aí ele vai usando no decorrer das aulas. Essa não é uma característica minha, então por isso que a minha sempre vai ter aula 1, aula 2, aula 3, que eu vou colocando por partes. Outros professores, eventualmente, pode ser que seja direto o material da aula dele. Então vai estar lá o tema da aula e a data vai ser a data inicial, mas talvez seja um material que corresponda a todos o os conteúdos que foram abordados, tá bem? Eh, os feedbacks, a ideia é que vocês respondam todas as aulas, e aí o nosso pedido é, respondam até, no máximo, 6 horas da tarde da próxima aula daquele tema. Por quê? Porque é o horário que o professor começa a se organizar pra dar aula, então ele já, já vê as perguntas, já se prepara pra essas perguntas, eventualmente a gente vai atrás de um material extra pra responder alguma coisa. Então é importante que venha até 6 horas da aula desse professor na sequência. E aí, eu recomendo muito vocês, principalmente quando a gente começar a falar de coisas teóricas, eu recomendo vocês responderem o feedback depois do exercício, depois da prática, depois da lição de casa ou um pouco antes da aula, exatamente pra vocês poderem trazer as questões. Por que que eu julgo isso importante? Porque na hora que vocês colocam as questões aqui, o professor sempre vai começar lendo isso. Então, todas as aulas iniciais é deixando todo mundo no mesmo nível. A gente faz o remember e vai respondendo as questões e vai linkando com o tema que vai ser discutido na aula. Então isso ajuda muito vocês acompanharem os temas de forma mais leve e tranquila, tá bem? Usem esse recurso. E, uma vez que se isso aqui tá claro pra todo mundo e todo mundo já tá familiarizado, vai ser essa rotina. Então, respondendo a pergunta da Vi, Vi, a gente sempre segue mais ou menos esse layout. A abreviação que vai sempre aparecer aqui no título, aí a aula, o número da aula e a data. Então sempre vai ser esse o nosso roteiro. E aí, se você quiser saber o tema que foi abordado, se você abrir aqui esse nosso roteiro dessa turma, aí tem um resuminho e os links também estão aqui. Então, quer dizer, facilita você acessar todo aquele material de forma mais leve. O link da gravação e o link do resumo. O material em si fica no Moodle. Combinado? Beleza? Alguém tem alguma pergunta ou alguma sugestão sobre o tema? Pensem que isso é pra vocês, então aqui são encurtadores que a gente aprendeu com as turmas passadas e tá tentando criar um facilitador pra vocês lidarem com tanto conteúdo. Alguém quer acrescentar algum ponto? Todo mundo suave? Então, maravilhoso. Fechou. Sobre os feedbacks, eu agradeço todos os feedbacks de você. Fiquei bem feliz porque mostra que vocês começaram já a entender qual é o esquema do do curso, que vocês vão falar bastante. Achei legal que vocês gostaram do networking, e o nosso início de aula aqui vai ser exatamente esse, a gente pensando em networking ainda, e vai ser um momento em que vocês vão poder conhecer outras pessoas diferentes daquela que vocês falaram. Além da gente ter dito sobre o Moodle, a gente ter falado sobre o Discord, vale eu reforçar isso, e vocês já devem talvez ter visto no nosso resumo, mas o link pro Discord, ele só dura uma semana. Então é interessante que vocês tentem fazer isso até a terça-feira que vem, de entrar lá no nosso Discord, pra vocês poderem discutir entre vocês e conhecer outras pessoas a- da da ASN também, tá bem? E aí, no final da aula passada, a gente fez a nossa sessão de networking, que foi o momento em que vocês receberam um link de uma imagem, lembram disso? Que foi lá uma imagem, alguns podem julgar estranhos, outros teve um grupo aí que já pegou todo o negócio que eu queria fazer suspense, mas beleza, é só não comentar nessa turma, né? E aí, eh, eu gostaria muito que vocês, só deixa eu tentar fazer o meu compartilhamento aqui, que ele tá indo pra tela errada. Gente, eu não sei, eu não sei vocês, mas vocês trabalham com várias telas? Vocês já estão nesse vício também, de ter mais do que um monitor? Mano, eu comprei.
+Eu queria.
+Tudo bom.
+Com 3.
+Olá, então eu tô que nem o Júnior, mano, eu comprei um extensor e agora eu tenho 3 telas e quando eu ponho o tablet fica 4, é alucinante, mano. É muito bom. E aí tava projetando na tela que eu tô vendo vocês, porque eu tô olhando pra cá, o material tá aqui e eu tenho ainda o meu principal aqui na frente. Então, olha lá, na aula passada a gente se dividiu em grupos aleatórios, aonde a proposta foi vocês discutirem em detalhes sobre a imagem que receberam e vocês vão fazer isso agora novamente, então relembrem da imagem que viram. E aí vocês fazerem networking, então, é iniciar a conversa entre vocês, entenderem quais são os medos. Nos feedbacks que eu li, eu fiquei feliz porque vocês perceberam que vocês não estão sozinhos no barco, ou seja, tem um monte de gente com as mesmas características e que vocês podem se acolher. Isso é uma das coisas que eu vou zelar muito e que eu vou im- pedir muito pra vocês. Tanto é que, na hora que a gente voltar da na- dessa nova sessão aqui de networking que a gente vai fazer... eu vou pedir pra vocês, pra vocês, é, é, criarem já as duplas de trabalho, que a gente vai fazer o seguinte, como que vai funcionar esse esquema? Cada mês você vai ter uma dupla amiga sua, e essa dupla, qual que é a missão dela? Ela te cobrar, ou seja, vamos nos motivar. Tu fez a lição? Quer bater um papo? E vocês continuarem com o networking em horários extras. Então, ah, vamos trocar uma ideia aqui na sexta-feira? Você tem algum momento aí? Vamos trocar uma ideia na, na, na, na... A gente faz aula terça e quinta. Vamos trocar uma ideia na quarta-feira? E aí vocês trocarem figurinhas entre vocês, e o tema do curso é uma das coisas pra vocês discutirem. Então, argumento de falta de assunto não vai existir. E o principal disso é vocês se motivarem. Pô, você fez a lição dessa semana? Que, que que você, você entendeu essa pergunta? Você ficou na dúvida, não sei o quê? Então, cada mês vocês vão ter uma dupla e vocês vão escolher essa dupla. Então, hoje vocês já comecem a olhar aí com quem vocês querem fazer essa dupla desse mês. E aí, quando eu falo mês, gente, a gente vai completar aí as 4 semanas. Aí virou essas 4 semanas, a gente vai lembrar vocês de trocarem as duplas, combinado? E uma coisa que também a gente não fez nas turmas anteriores, mas agora a gente vai começar a fazer, até pra motivá-los, vai ser chamar vocês semanalmente, de 15 em 15 dias, pra perguntar como é que estão indo as coisas, se as duplas estão funcionando, se vocês estão marcando bate-papos. Então eu vou cobrar as coisas de vocês. Um, porque vocês estão pagando, não é mesmo? Então, e e a vida é tão corrida, né, que eventualmente a gente vai esquecendo algumas coisas, algumas das nossas prioridades definidas. Então a gente vai fazer esse papel de ficar lembrando dessa prioridade, que é o curso, e cobrando de vocês essa participação, esse networking, essa relação entre vocês. Tá bem? Então, se recebeu uma mensagem minha, da Lê ou da Mabê, já sabe que é algum tipo de remember e querendo entender como que as coisas estão indo pro seu lado. Fechou? Muito bem. O que que nós faremos agora, então? Agora a gente vai se dividir novamente pelo pelos grupos, e vocês vão ter aí mais uma hora de conversa entre vocês, aonde eu quero que agora vocês vão ter duas missões. Uma é conhecer bem as pessoas, e aí vocês podem usar aquele mesmo racional de networking, aquilo foi uma sugestão, óbvio que vocês podem falar de outras coisas, mas eu quero que você descreva pro seu grupo qual foi a imagem que você viu, e cada um vai fazer isso. E agora vocês vão começar a discutir sobre as imagens que tiveram ali dentro. Então, cada um de vocês vai contar a imagem que viu na aula passada, e vocês vão conversar sobre elas e vão se conhecer. Combinado? Eu vou ficar a a intrusa, né? Eu vou ficar andando nas salas das mesmas formas, só que a minha câmera fica desligada, o meu microfone mutado, e a ideia é eu eu não atrapalhar na interação de vocês. Eu só vou ficar de bicuda mesmo, tá bom? Alguém tem alguma pergunta? Valéria, que não viu a imagem, fique tranquila, você vai ouvir a imagem dos demais e aí essas coisas vão fazer sentido na hora que a gente voltar, tá bem? Diga lá, Cami.
+Andri, até que horário a gente fica nessa divisão do grupo? Só me organizar aqui.
+Perfeita.
+Quem sabe que eu tenho a minha rotina das meninas, né?
+Perfeita, vê se te atrapalha na sua rotina. A minha intenção era buscar vocês às 8 e 15, a gente faz uma discussão, vai pro intervalo e aí na volta a gente começa já um outro tema.
+Perfeito, então tranquilo.
+Tá bem?
+Uhum.
+Então, galera, vocês vão ter uma hora. Eu quero que vocês explorem vários temas entre vocês, que vocês conversem, realmente criem conexões, combinado? E lembrem que no final dessa aula de hoje vocês vão me dizer quem serão as duplas de vocês por esse mês. Fechou? Então demorou. Bom trabalho pra vocês, a gente se encontra já, já. Ah, os grupos serão de...
+É.
+Beleza, manda.
+Aí, você só precisa perguntar pra cada pessoa e a pessoa fala, eu quero estar com essa pessoa? Se eu não quiser estar...
+Você fica à vontade. Eu, eu quero que você escolha um amiguinho seu aí.
+Vai ficar a gente ser escolhido, vai ser triste.
+Você pode ser escolhida também, não tem problema nenhum. E como que a gente vai fazer esse, esses grupos acontecerem, gente? Vocês vão ver que no tempo que vocês estiverem aí, eu vou mandar o formato lá no nosso grupo do WhatsApp, e aí lá mesmo vocês vão dizendo quem com quem, tá bom?
+Ah, entendi, vai ser no Zap, massa.
+Aí no Zap vocês vão criando os grupos, e aí quem sobrou já se organiza por ali mesmo. Definiu os grupos, a gente documenta aqui dentro, e aí depois a gente começa a fazer esse monitoramento junto com vocês.
+Duplas, né, você tá falando? Grupo.
+Dupla, dupla, dupla, dupla. Fechou, acho que eu falei grupo aí e falei merda. Beleza? Alguém mais quer fazer algum outro comentário antes da gente ir pra divisão dos grupos? Todo mundo bem? Então bora, gente, conheçam outras pessoas, deem valor a esse grupo aqui que vocês estão vendo, vocês estão tudo no mesmo barco e tem um monte de gente com coisas e angústias em comum. Compartilhem isso pra vocês se unirem, tá bem? Bora lá, Lê, pode dividir. Obrigada.
+Hum.
+E aí?
+Aí eu tive que que falar, adorei a ideia. É, eles deram uma ideia de, eles estavam discutindo sobre inglês, né? E o inglês, querendo ou não, no nosso mundo é importante. E e aí eles deram a ideia, porra, podia ter uma aula aí, uns 30 minutos de aula de inglês, só pra gente ver se a gente entende e como que fala, né? Falei, pô, tô indo lá fazer o curso, eu vou dar essa aula de inglês então pra vocês no futuro, quando eu tiver boa lá. E aí até me questionaram, mas você vai, você vai continuar trabalhando de lá? Sim, gente, nada muda na nossa relação aqui, tá? Eu só, que nem agora que eu tô nômade, cada hora eu tô num lugar, na daqui um an- daqui alguns meses eu estarei lá no Canadá e escolhi Toronto exatamente por ter uma diferença de horário pouco. Então vocês dormem às 10, eu vou dormir às 9 da noite lá, porque lá eu tô uma hora antes, então tá super, nada muda.
+Só levaríamos.
+O horário que eu aqui, ó, mesmo horário que eu aqui.
+Léo tá onde mesmo? Me ajuda.
+Campo Grande, Mato Grosso do Sul, uma hora a menos. Delícia.
+Já.
+O que é bom.
+É, isso é verdade.
+É bom que a Adri vai dar aula, vai estar de dia lá, se bobear ainda, né? Que anoitece tarde.
+Pra caramba, né?
+Júnior vai pra lá também, não vai?
+Ou
+Eu vou, mas eu vou ficar, eu vou ficar em Mississauga. É perto do aeroporto, você vai chegar onde eu vou ficar.
+Perfeito. Aí eu vou te contando então, que vai um pouco depois, né? Maravilhoso. E o, e o Pedro-
+A gente estava falando de inglês.
+Ó lá, vários grupos, eu passei coisas que eu fui ouvindo. Vi discussão sobre inglês, vi discussão sobre os medos do curso, vi discussões do tipo, caralho, tô fazendo networking, tô me conectando com pessoas novas, que é o objetivo de um, de um monte de gente aqui dentro. E vi a discussão sobre as imagens e eu mijei de rir aqui quietinha, mas eu dei muita risada com o que vocês viram nas imagens. Só que a gente vai falar dela depois do intervalo. Então, agora eu queria contar um pouquinho sobre vocês. É... quem é essa turma, né? Da onde vocês estão? E aqui eu já vou dar alguns recados, algumas mensagens. Como eu comentei com vocês logo no início, a nossa premissa aqui é não existe pergunta burra. Uma outra premissa muito importante e que a gente zela muito por isso, é que, como não existe pergunta burra, também não existe o quê? Falta de educação com o coleguinha. Então, a gente vai sempre respeitar muito a dúvida dos outros. A gente sempre vai se dispor a ajudar o outro, porque são pessoas com cérebro diferentes e que pensam de formas diferentes. Então, isso é uma das coisas que a gente sempre vai zelar muito dentro e e em sala de aula. Eh, se tiver algum problema, eu chamarei no particular pra trocar uma figurinha, mas eu acredito que aqui, como somos todos adultos e todo mundo deve ter esse mesmo tipo de pensamento, a gente não vai ter nenhum problema, tá bem? Mas isso é uma das coisas que eu sempre vou exigir demais, que é respeito ao próximo. Então, se alguém não entendeu alguma coisa, a gente vai ouvir, vai repetir. Se alguém tá sofrendo com alguma coisa e óbvio, né, se for em relação ao tema da aula aí, a gente vai dar o suporte pra que essa pessoa se sinta acolhida. Isso foi um dos feedbacks que também vieram lá de duas ou três pessoas dizendo, pô, é um curso que eu tô me sentindo acolhido, eu tô sentindo que tem pessoas parecidas a mim. Sim, todos nós aqui estamos no mesmo barco, mano. A gente é muito parecido. É, é, tanto vocês como alunos quanto com os professores, vocês vão se identificar porque todo mundo tá no mesmo barco, mas o principal é que a gente saiba se respeitar, tá? Então isso vai ser um ponto muito importante. Onde vocês estão? A nossa turma 4, a gente tá espalhado em vários lugares aqui do Brasil e temos uma pessoa no México. O que isso quer dizer? A Pâmela, ela fala outra língua, então naturalmente, em alguns momentos ela vai ter dificuldade de entender o que nós falamos, e aqui é onde já começa esse nosso pedido de respeito e de compreensão. Eu estou tentando falar mais devagar, e quando vocês forem se comunicar com ela, né, Pâmela, se puder aí falar um hello, também se comunicarem de uma forma mais uh uh lenta, para que ela possa entender o que a gente está falando, tá bem? E nos demais
+Sim, obrigada, pessoal. Eu agradeço aí.
+E a Pâmela tem muito a agregar, gente, ó, ela vai, daqui a pouco vão falar sobre ela, né, que cada um vai apresentar outra pessoa aí, mas ela atualmente tá no Nubank e todo mundo tem interesse de saber como é o Nubank. Tá no Nubank lá fora, então vocês vão ver como funciona em outro país, é uma boa troca aí pra vocês aprenderem como é em outros lugares. Aliás, em vários grupos que eu entrei, era uma galera falando de trabalhar fora do Brasil, né? Gente daqui trabalhando pra fora, gente que tá querendo ir pra fora. Então, quer dizer, aqui na turma você já tem várias pessoas que vocês podem trocar figurinha sobre o tema. E aí vocês estão espalhados aqui, mas isso não, não, essa turma, inclusive, e aí entra alguns sentimentos nossos, né? É, é, eu comentei com vocês que o nosso curso, a primeira turma, ela era presencial. Eu montei um escritório, ele ficava aqui na Vila Olímpia, em São Paulo, e a ideia era de que a gente fosse pra sala de aula. Só que veio a pandemia, tudo ficou online, e aí nenhum mais aluno quis voltar. E eu falei, ah, então vou fechar essa porra desse escritório, não tem porque eu ficar sustentando aquilo, porque todo mundo curtiu muito essa interação de forma remota. E essa turma 1, inclusive, eles são tipo muito amigos entre si. Só que na turma 1, com a com a aula ao vivo, eu fiz uns testes e coloquei uma câmera em cima lá da sala, e aí eu peguei 4 pessoas de cobaia. Eram pessoas que queriam muito o curso, muito, muito, muito, estavam tipo alucinados pra ter o curso. Inclusive, um deles, eu era a meta do ano passado dele, eu tava lá, fazer um curso com a Adriana Silva. Então ele queria demais, ele implorava muito pra ter uma turma, mas ele era do de outra cidade. Eu falei, cara, eu só tô dando curso presencial. Não, vamos dar um jeito, vamos dar um jeito. E aí eu coloquei 4 cobaias. Então, se vocês olharem o nosso histórico da turma, na turma 1 era todo mundo de São Paulo, com alguns poucos cobaias que estavam fora dali, da nossa região principal, porque eles estavam testando esse formato de... era horrível, pra eles foi maravilhoso ter entrado na pandemia, porque imagina uma câmera e o professor ali falando e escrevendo numa lousa, eles viam muito, muito ruim e na na entrevista, eu fiz a entrevista aqui, ó, você tá vendo que vai ser uma merda? Você tá vendo isso aqui, ó, não é bom, eu não, eu não recomendo. Não, mas eu quero, eu quero. E aí vieram. E aí, na turma 2 em diante, a gente já passou pra tudo online. Aí vocês vejam, ó, a gente tinha aluno lá em Roraima, então também tava com diferença de horário e pra ele era tudo mais cedo. E aí a turma 3 também já se pulverizou muito aqui por essa região e vocês agora com até aluno internacional ali fora, né? Já em relação a ao ao gênero, né, o sexo biológico, essa turma eu fiquei chocada, porque normalmente a nossa história de alunos, eu acho que por eu ser mulher, eu eu acabo trazendo muitas mulheres, mas essa turma foi a que mais deu desequilíbrio, então aqui a gente tem muito mais homem do que mulher, muito mais o gênero masculino do que o feminino. Já no nosso histórico, se vocês verem, a primeira turma foi meio a meio, a segunda turma foi mais feminino do que masculino, a terceira estava ali mais próximo e essa que deu uma diferenciação. Então aí eu fico me questionando, né, mano, será que a gente... que que tá faltando pra gente atrair mais mulher pra essa área? E e e isso é um ponto que, cara, tanto tanto o masculino como o feminino tem que discutir, tem que pensar, porque a tecnologia ela vem pra ajudar os nossos problemas, né? E ter mulheres pensando nos problemas delas fazem com que essa tecnologia seja pra todos. Porque, né, um um um gênero masculino, ele não consegue pensar nos problemas que um feminino tem, porque são coisas distintas. Então, trazer mais mulheres é importantíssimo e a gente trabalha muito nisso, mas nessa turma, infelizmente, eu não sei o que foi que aconteceu que deu essa queda, mas nas turmas anteriores a gente tinha até uma predominância aí feminina. Já em relação à idade, essa é uma turma que as idades começaram a aumentar. Então aqui eu tenho alguns alunos mais velhos do que eu tive em outras turmas, mas isso é uma coisa que foi acontecendo de turma a turma. Então, olha só que interessante, essa é uma distribuição, isso aqui a gente vai estudar muito nas minhas aulas de estatística, entender o que que é o princípio de um histograma, como que faz e como interpreta, mas o que a gente nota é que a gente tem a maioria dos nossos alunos ali, esperando 15, 16 alunos que estão entre idades ali de 32 a 36 anos, e o restante tá mais pulverizado, assim como a gente tem ali, ah, 2, 3 que são jovens, que são as minhas meninas aqui, né, a Lê e a Mabê, e alguns que já têm mais do que 55 anos. Então, veja lá que a gente tá, eu, a minha cauda, ela foi aumentando um pouco, olha só que interessante. Tá vendo que ela vai começando a puxar um pouquinho mais lá para os 60 na turma 3 e turma 4. Então, isso é uma das coisas que eu acho muito legal e que eu admiro bastante, porque a gente tá vendo que a gente tá durando mais, né? Então, eu, quando era criança, eu falava que 30 anos era velho, hoje com 36 eu falo, caralho, mano, eu me sinto ainda, tipo, tem tanta coisa pra viver que não dá pra me chamar de velha mais. Então esse discurso vem mudando, né? E se a gente pegasse jornais de épocas muito, muito passadas, é... até me mostraram isso lá quando eu tava em BH, semanas passadas. E aí o cara mostrou, mas olha esse jornal aqui, ó, uma velhinha de 41 anos cai dentro de casa, tipo uma velhinha de 41 anos. Imagina, hoje em dia isso não tem mais sentido, né? Então, graças a Deus, como a gente tá durando mais, eu tô vendo esse movimento, inclusive na minha sala de aula, o que me deixa bem feliz, porque o cérebro de uma pessoa que já tem mais vivência vê as coisas de um jeito diferente, a criticidade é outra, então agrega muito valor. Então isso é uma das coisas que eu achei muito legal na nossa turma aqui. Isso daqui eu trago muito pra tranquilizar o coração de vocês. Ai, mas eu não sei nada de SQL. Mano, você não é o único. Eu tenho 10 alunos que se classificam com conhecimento bem baixo de SQL. E lembra lá que o nosso primeiro, primeiro tópico ali vai ser exatamente vocês ganharem familiaridade com essas linguagens. Mas eu reforço tudo o que eu disse na entrevista pra todos vocês. A nossa meta do curso não é que vocês se tornem programadores. Então ninguém vai sair daqui rei ou rainha da programação. O que é? Que vocês pratiquem os exercícios, que vocês exercitem, pra que vocês ganhem familiaridade. E aí, de novo, eu reforço, ficar só na atividade dentro da aula é a mesma coisa que fazer um curso de inglês em que todo mundo falou de inglês, em que você só vai pra aula, fala aquela, aquela uma horinha e depois não fala mais, aí na outra semana quer falar de novo e quer ganhar fluidez como? Então, como tudo na vida, isso não se diferencia. Quando falarmos de programação, é importantíssimo que vocês pratiquem e usem vocês, entre vocês, para fazer trocas. As duplas vão ajudar muito nisso. A proposta da dupla é essa. Cara, tô com dificuldade, vamos tentar fazer juntos? Vamos, vamos trocar uma figurinha? Porra, a gente tá sofrendo, vamos chamar outra dupla. Eu quero que vocês comecem a se conectar de uma forma mais intensa para que vocês se ajudem. Diga lá, Si, por favor.
+Pri, desculpa a pergunta, mas eh, eu fiquei em dúvida nessa, o 1 é pouco, eh, e aí vai aumentando até o 5?
+Isso. O nível de conhecimento, a nível de conhecimento 1 é o mais baixo e o 5 era o mais alto. Então a gente até que tem uma divisão interessante, mas ninguém tá sozinho nesse barco.
+Ah, tá. Não, é porque as escalas às vezes mudam, né? Então, dependendo de onde você tá, o 1 é considerado muito bom, e aí você vai diminuindo.
+Agora até você me deixou na dúvida, Lei, Mabê, vocês me ajudam? O, até onde eu me lembro, o 1 era o, era o, era o baixo, certo?
+Isso.
+1 é o baixo.
+Isso.
+1 é o mais baixo.
+Então é isso mesmo, sim. Muito obrigada. E isso nas outras turmas tinha um comportamento... A turma 1 já veio um pouquinho mais preparada, eram só 3 alunos que se se entendiam ali no nível mais baixo. Já as outras já tinham comportamentos semelhantes ao que a gente tem aqui. Então, a gente lida aí com esses tipos de comportamentos diferentes. Uma sugestão que eu dou pra vocês é fazerem amizades e contatos com pessoas que estão em níveis acima, pra você poder aprender. Então, se você tá em nível acima em um tema e ele tá em outro, troca uma figurinha, você agrega em uma coisa, ele agrega em outra. Então, isso também ajuda muito. Em relação ao Python, não estamos nada diferente, então olha lá, também tenho níveis diferentes aqui dentro pra acalmar o coração de vocês. E, de novo, reforço, tudo que é em relação a Python, a R, a SQL, programação, treino, treino. É não só isso, né, gente? Estatística e todo o caralho que vocês vão ver aqui vai ser treino pra caramba, mas tenham isso em mente. Separem horários pra treinarem. Nas turmas passadas a gente teve comportamentos semelhantes, e em relação ao R também. E nas turmas passadas, também algo semelhante. E aí, o que que eu quero mostrar com isso? De novo, reforçar que vocês não estão sozinhos. E da mesma forma que eu pedi compreensão em relação à linguagem, pensando ali na na na Pâmela, que está em outro país e que fala outra língua, eu também quero muito pedir compreensão pra vocês com os pais e mães aqui dentro. Porque a gente sabe que ter filhos é um negócio desafiador, é um negócio que, meu Deus, pai santo, eu vejo pelo meu, meu sobrinho, meu irmão, é um negócio que, que baratina uma pessoa e faz todo o sentido. Então, a gente se ajudar nesse sentido também é muito importante, né? Então, o respeito, entender que existem momentos. E aí, só pra vocês entenderem, ó, 60% da nossa turma aqui não tem filhos. No entanto, 25% tem 1, 8% tem 2 e 2,8 aí, que é o Gênesis, né, Gênesis?
+Isso.
+Tem 3.
+3.
+3 de uma vez, não foi, Gênesis?
+3 de uma vez, uma tacada só.
+Imagina um trigêmeos de uma vez, mas agora já são grandes, né? Tem 11 anos, se não me engano.
+11 anos, exatamente.
+Eu vou dar, eu vou dar o uma, uma, uma insight do meu compadre, tá? Ele teve uma filhinha, tá com 4, agora tá vindo outro. Ele disse que nas contas dele, ele vai passar 10 anos trocando fralda. Então, pelo menos, passou só 4.
+É, pois é, pois é. Tem algumas vantagens, né? Passa uma vez só, né?
+Passou só 4.
+Uma festa de aniversário só, né? É uma festa de aniversário só.
+Eu tenho uma de 1 e 10.
+Ah, deixa eu pensar por isso.
+É, né? Dá pra des- desconto, né, na escola, a gente negocia, pô.
+Nossa, imagina a paulada de escola, gente.
+Tá, né? Nem me fala, né?
+Mas tem uma vantagem, é uma festa só.
+É.
+É.
+A- até eles se darem conta, né?
+Ma- mas a escola não dá desconto quando são mais de dois lá no Brasil?
+Não.
+Dá.
+Sim.
+Aí não?
+Realmente dá um descontinho.
+Não.
+Pô, tem que chorar, bicho.
+5%.
+Mais de 10%.
+Pô, chega lá, fala, ó, tá entrando 3.
+Se não der, eu mudo de escola. Esse, esse ano mesmo já mudei, né? A escola que eles estavam, eles, eles, eles entraram no ensino médio agora, né? Poxa, aumentaram 50%. Falei, você tá doido, meu? Você é maluco. Você me quebrou as pernas. Eu mudei de escola, entendeu?
+Caraca, é, haja dinheiro aí para as coisas.
+É.
+O Genis tem, tem, tem 3, mas tem 8% aí que tem 2, que são alguns 2, 3 alunos a mais aí também que tem, né?
+Tenho 2 recém-nascidas, hein?
+Olha lá.
+É uma recém e uma, eu tenho 2 bebês, né? Uma de 1 e 10 e outra com 40 dias.
+Nossa.
+40 dias?
+40 dias.
+Meu Deus.
+É, que legal.
+Bora já bota ela pra, pra já começar a ouvir esses termos, porque aí já vai crescendo com conhecimento diferenciado.
+Exatamente.
+Vou trazer a Pietra aqui.
+Só não bota ela pra assistir minhas aulas, que é muita porcaria que eu falo.
+Esquenta não, Adriana, esquenta não. Ela já ouve muita porcaria em casa. Então, quando ela faz alguma coisa de errado, você pergunta: Pietra, que que você fez? Ela: merda.
+Maravilhoso. E vocês conversaram sobre hobbies? Isso eu não ouvi nenhum grupo que eu entrei.
+A gente conversou.
+Mas vocês têm... Ah, é? E e o que que é a galera lá? Porque aqui o que eu recebi de vocês é que muita gente gosta de ler, achei isso o máximo, então o Clube do Livro vai voltar, hein, e conto com a ajuda de vocês.
+Uhum.
+Musculação, mano, comecei musculação hoje, hein?
+Eu fazia triada.
+Então, eu eu tenho, eu tenho comentário sobre isso. Hoje em dia não dá pra considerar isso hobby, é questão de saúde.
+É.
+É.
+É tipo, você você nem faz mais.
+De saúde.
+Você nem faz mais porque é algo que você acha divertido. Não, preciso fazer.
+Tem que fazer.
+É, eu mesmo faço, mas eu acho horrível.
+Precisa, né? Não tem por onde.
+É isso aí.
+E séries? Que séries vocês têm pra indicar aqui?
+Ah, eu tenho aquelas de nerd, né? Game of Thrones, Breaking Bad.
+Nossa, na na linha do Breaking Bad, puxando sardinha pro lado dos advogados, Better Call Saul é muito melhor do que Breaking Bad, vale muito a pena ver.
+Pinófi, né?
+Sério?
+Ô, tem uma, tem uma muito boa.
+Engraçado pra caramba, cara, é mais bem construído, né?
+Não tem nada a ver com-
+Qual que é a série?
+Qual que é o filme pra mim?
+Better Better Call Saul.
+So Saul Goodman, né, o advogado.
+Não tem nada a ver com direito na vida real, mas é muito legal.
+O criador é muito bom, né?
+Personagem.
+Tem uma série.
+Assisti as duas.
+Tem uma série chamada Fundação no no Apple TV. Olha, olha a pira. É um ate- é um futuro lá, muito louco, universo fictício. Um matemático, ele descobre uma forma de prever a grandes eventos, a derrocada do império no futuro, com probabilidade, tá? Ele tem uma teoria da probabilidade lá que ele prevê. Ele fala que consegue prever o futuro, mas não o futuro de indivíduos, só de grandes populações. Aí ele é perseguido e tal. Tipo, vale a pena, tá? É uma viagem.
+Como chama essa? Manda esse
+Fundação.
+vídeo aqui pra gente também. Fundação.
+Tem alguma coisa a ver com a fundação do do Isaac Asimov?
+Isso, baseado.
+Mas.
+Bem massa.
+Essa eu não vi.
+Tô curtindo.
+Essa eu não sei. O Eduardo mandou aqui, eu gosto da série do Luiz Fávero. Todo mundo entendeu? O Luiz Paulo Fávero é o coordenador do curso da USP e ele tem vários livros. Eu acho que essa série que ele tá falando é série de livros, não é, Eduardo?
+Gente, pra quem gosta de de uma pegada de série mais voltada ali pro mistério, terror, tem uma na Globoplay muito legal, chamada Origem.
+Ai.
+É.
+De terror já baixa no dia 10, rapaz, que tá maluco.
+Eu tô pra assistir essa Origem, ela tá na minha lista.
+Nossa, é, é, é fora da curva, é muito legal.
+Nossa, demais.
+Gente, tem a do momento também, né, que é Succession, que é a que se mais se fala hoje em dia e que...
+Eu tô me sentindo desatualizada, então, que que é essa que eu nem sei como é.
+Que ela acabou agora, ela ficou muito falada, porque um é inspirado na, não é que é inspirado na vida real, né, mas ela é muito bem go- assim, é que nem fala, coisa da HBO é muito bom, mas... o nome da série é Sucessão, ou seja, o velho rico vai morrer, não tô dando spoiler, tá? E nisso qua- quem dos filhos vai, não, isso não é spoiler, quem dos filhos vai assumir? Só que isso tem toda uma brincadeira ali de não só aquela ideia de ser você ser filho de uma pessoa bilionária, mas a ideia de você, ah, você ser muito alto intitulado, o jogo de poder também querer a aprovação do pai, e aí é muito bem construído os personagens, ganhou muito Emmy, especialmente por causa da atuação.
+Já chegou ao fim?
+E... Oi?
+Já chegou ao fim dela ou ainda vai rolar?
+Chegou, já.
+Eu tenho uma ansiedade, sabe? Então, tipo, eu prefiro que tenha acabe e depois eu assisto.
+Acabou, acabou. São 4 temporadas, 9 episódios.
+Inclusive, eu assisti a primeira, é, eu assisti a primeira temporada, só tô indo pra segunda, eu gostei bastante, é bem boa mesmo.
+Ela é bem boa.
+Falando em série, o primeiro episódio da nova temporada de Black Mirror tá sensacional. A temporada
+Ai, eu assisti.
+em cima, ela é essas coisas, mas o primeiro episódio é sensacional.
+Eu assisti o segundo, eu falei, porra, cadê a tecnologia aqui? Foi só a morte, assassinato?
+Pois é.
+Tipo, eu me questionei.
+É, não, mudou um pouco, assim, essa pegada, mas o primeiro episódio é sensacional.
+A outra que comentaram aqui.
+A anterior tinha sido bem fraca, apesar de eu ter gostado daquele filme que você vai tomando as decisões, né?
+Ah, que é interativo, né?
+Ah, foi muito legal. Você acredita que eu fiz uma palestra? Eu fiz uma palestra em que o, as pessoas que estavam assistindo escolhiam o que que eu ia falar. Foi muito da hora, porque daí levantava a plaquinha, ah, então beleza, então vou explicar essa porra aqui que vocês estão querendo. Aí eu falava daquela merda, aí eu fazia outra pergunta, ia pra outra, foi muito massa, cara. É, é, foi exatamente a mesma ideia e na se- não que eu tenha sido a que inventei isso, mas nem foi uma ideia minha, inclusive, foi de um time que estava trabalhando comigo. E aí, na sequência, a Netflix lançou isso. Eu falei, caralho, igualzinho, mano, mesma ideia, velho. Só que eles tiveram que gravar todas, eu não, eu só tive que preparar o PPT pra ir pro outro lado, mas eu só apresentei uma, né? Muito massa. Outra que falaram que eu acho que vale muito a pena, principalmente no quesito que a gente falou de respeito, educação, entender um pouco os outros, né, o lance de empatia, This is Us, gente. Essa série é animal pra gente entender como pessoas diferentes existem e todas elas ex- existem e agem de determinadas formas pela história que ela teve, né? Então, essa série eu ainda não terminei, eu tô tá, já acabou, tá, Júnior, se se interessar em ver, só que são 6 temporadas, o bagulho é do demônio, tipo de muito grande, mas vale muito a pena, eu tô amando.
+Eu, Dri.
+Dri, eu tô, eu terminei a quinta, mas eu tô esperando meu emocional ficar bom pra assistir a sexta.
+É.
+Porque eu choro de ma- é muito.
+Balde de lágrimas.
+Você chora toda, toda a coisa, você chora. E aí você fala, caralho, mano, olha lá, tá vendo? Talvez seja por isso que eu seja assim. O a a história da Kate é muito parecida com a minha, até no quesito obesidade, assim, é muito louco ver, ver aquilo estampado numa série, assim. E vai ter o lançamento da Adriana Will Kill, né? A gente já já vai ter isso aí, então vamos seguir aqui. Outra coisa que eu achei legal foi sobre comidas que a gente perguntou pra vocês, então saibam que a nossa festa de comemoração no final do curso vai ser churrasco. Mas quem não come carne, fique tranquilo, que eu tô parando de comer carne agora também, vai ter comida lá pra vegetarianos e veganos, e vai ser um momento que a gente vai se conhecer pessoalmente. Eu deixo tudo avisado pra vocês, vai ser daqui 2 anos, ainda temos uma puta jornada aí, mas eu quero que todos estejam presentes, então se organizem e já organizem passagem e tal. E aí, eu ainda não tenho decidido onde vai ser, porque antes fazia na minha casa gigante lá, mas como eu não tenho mais nada, a gente vai alugar algum lugar legal, vai ser um churrasco, vai ter banda, a gente vai poder se divertir, e é o momento, então, que a gente se encontra pessoalmente. E nessa nossa festa aí, finalzona de de formatura, eu chamo a turma anterior pra participar, então vocês também fazem conexões com pessoas de outras turmas, ou seja, já vê como que eles estão no mercado, vocês também já vão estar movimentados, eu não tenho dúvida, porque vai chegando no período do curso, todo mundo começa a se mexer, encontrar outros lugares interessantes. E aqui, gente, já fica uma mensagem legal entre vocês. Tem alguém procurando emprego? Bora mandar no grupo, porque às vezes outro sabe de uma vaga, pode te indicar. Então troquem isso daí entre vocês também e contem comigo. O que eu quero dizer com isso? Eu não sou Deus, eu não conheço todas as vagas do mundo, eu não conheço todas as pessoas do universo, mas eu tenho muito networking e por ser professora e por ter contato com muitas pessoas, eu recebo muitos pedidos de indicação. E aí eu eu saio mandando currículos. Então, vários alunos meus conseguiram através de alguma conexão que a gente fez. Então, se você tiver procurando, se você tiver desgostoso na sua e tiver de o- de olho no mercado, troca ideia aqui entre a gente e pode dar uns gritos aqui pra mim que eu tento ajudar também. Não prometo nada, porque até o mercado não tá tão aquecido nesse momento, mas eu fico à disposição pra auxiliá-los e até se vocês, ó, uma coisa que eu faço com os meus alunos é treinar apresent- é... ah, treinar entrevista.
+Entrevista.
+Então eu vou no nível bem técnico pra foder mesmo, e aí você se sentir mais confortável na hora de ser pra uma entrevista ao vivo, porque dependendo de onde você for fazer a entrevista, pode ser que se desça no nível de detalhe. Então eu treino nesse nível de detalhe e vocês podem me solicitar isso sem problemas, é só questão da gente organizar a agenda, tá bem? Fiz isso já com vários alunos e fico à disposição. Só não faço em inglês ainda, mas logo mais poderei fazer isso também, porque eu vou viver essa experiência lá fora, certo? Então, churrasco que nos aguarde, e o que eu gostei também é que agora eu já posso até escolher o estilo de música que a gente vai tocar na festa. Então vou ter que pôr um pouco de sertanejo, por mais que eu não goste, mas rock pop ganhou bastante forte aqui, então pode rolar uma banda aí com esse estilo que eu acho que eu agrado a maioria. E... e eu achei interessante que tem umas opiniões diferentes aí, mas a gente tem coisas bem em comum, né? Então os nossos gostos aqui não são tão desalinhados. São 8 e 40, nossa missão agora é fazer um belo de um intervalo, 9 horas a gente volta, e aí, que que a gente vai fazer na volta? Cada um vai apresentar brevemente um colega. Ah, mas que colega eu vou apresentar? Eu vou escolher. Então, no seu último grupo, você teve a- as suas últimas conexões, você deve ter essas coisas frescas na sua cabeça. Então, você vai apresentar alguém que estava lá no seu grupo de agora há pouco. E aí, apresentar de forma sucinta, combinado? Pra gente dar valor à pessoa que a gente dedicou o tempo e que ela dedicou o tempo a nos ouvir. Combinado? Então, olha, são 8 e 42, nós voltamos 9 e 2 pontualmente, e aí eu já começo com essa atividade de vocês falarem entre vocês. Até já?
+Beleza.
+Vamos só relembrar, câmera desligada, microfone, pra gente não pegar o que não precisa. Beijos e até já. Mas belê, bora. Fechou? Galera, vamos voltar aí todo mundo, que agora é o momento que a gente vai usar, no máximo 30 minutos da aula, pra que a gente apresente uns aos outros, pra que eu feche a aula falando sobre as tais das imagens que eu ouvi de tudo quanto é coisa e faça um link com o que nos importa. Então, bora lá. É... a primeira pessoa que tá aqui no meu material é a Mabê. E aí, quem vai apresentar a Mabê pra gente vai ser o Anderson, que dividiu o grupo com ela nesse último momento aí. Anderson, o que que você lembra da Mabê? O que que você conta dela pra gente?
+Bom, pessoal, eu lembro da Mabê que ela... ela está terminando o curso de estatística na Unesp, né, universidade, que ela está com muita saudade da família. Ela falou porque tá nessa longa jornada, tá mais de 4 anos, então tá no último ano. Ela também é uma das nossas, eh, mentoras ou tutoras, né? Que contamos, que podemos contar no apoio com do curso, ao longo do curso com ela. Outra, outro ponto que eu me lembro que teve uma certa, né, Babi, uma certa, uma certa barganha, principalmente com o pai dela, que se era pra fazer um curso, os dois cursos são ligados à área da arte, eh, tanto pra teatro ou pra música, né? É que ela mora numa república, que ela está namorando, e nessa república tem uma menina que tem dois cãezinhos, dois pets, né? Então, acho que ela também deve animar os animaizinhos, então o hobby que ela tá buscando mais é em torno da música, usou do teatro pra vencer essa timidez e que você, Dri, tá a inspirando a, de repente, seguir na carreira da docência, que em algum momento a gente perguntou se ela
+Pois, eu não sabia, olha que eu sorriso como cresceu.
+É, e você tá inspirando, porque ela falou, olha, até então eu tinha uma outra perspectiva, mas agora eu acho que eu vou ficar na, mais na carreira como docente, dando aula também, tudo, então provavelmente, ela falou, não, a partir do momento que eu comecei aqui na ACN, eu tô pensando muito mais em vir na área docente. Eu falei, poxa, então é, é o toque da Dri que já deu no cal, né, no Téo, já deu no Téo lá o, de seguir também a carreira docente.
+This meeting is being recorded.
+E ela também tá pensando.
+Saiu, gente, a a a gravação? Eu não entendi, apitou de novo aqui, desculpa interromper, Anderson. Tá gravando?
+Saiu, tá gravando.
+No meu tá gravando.
+Tá gravado agora, eu acho que não tinha volta- eu eu acho que não tinha voltado, Dri, do intervalo.
+E pior que pro meu já tava, mas beleza, vamos continuar. Muito bom, Anderson, mu- Mabê, tudo correto? Observações bem, bem colocadas?
+Tudo correto, falou direitinho.
+Maravilhoso. Então, gente, essa é a Mabê, que será uma futura professora. Vejam lá como o meu sorriso aumentou. Fiquei muito feliz com essa notícia. E Mabê, seja bem-vinda, e como todos já sabem, ela é o nosso ponto aqui de contato, então até o e-mail dela tá ali marcado. E demorou, bora lá que a gente tem uma longa jornada juntos. Eu vou pedir sempre pra vocês usarem até no máximo um minuto pra descrever a pessoa, ok? Que eu quero tentar fechar isso até 9 e meia. Então vamos lá, Tanous, eu gostaria muito que você contasse um pouquinho sobre a Letícia, a Lê. E aí, gente, o primeiro nome que aparece aqui é a forma como a pessoa gosta de ser chamada. Então a Lê gosta de ser chamada de Lê. E o nome embaixo, o LinkedIn, e o LinkedIn, gente, a gente vai disponibilizar no Moodle pra vocês o LinkedIn de todos, então vocês podem e devem se adicionar, combinado? E aí a faculdade e a e a universidade dela ou onde a pessoa trabalha, tá? Vai estar aqui também no slide. Então, Thanos, você que trocou uma ideia, então primeiro me diga se eu tô pronunciando seu nome correto.
+É.
+E segundo, tá certo, Thanos? Então
+É que nem do dos Avengers, Thanos, Thanos.
+Thanos.
+Pode ser. É, o pessoal
+Então eu tô falando errado.
+Pode ser de qualquer jeito, tá certo. Chamando de Thanos, tá bom.
+Não, vamos falar certo. Thanos, então é Thanos, gente. Thanos, então conta pra gente o que que você lembra da Lê lá, na sua conversa.
+Bom. A Lê tem 22 anos, se formou agora no começo do ano em estatística na na Unesp também. Ela é de Presidente Prudente, na verdade é uma cidade próxima, vizinha a Presidente Prudente, né, mas como ponto de referência ela geralmente, eu esqueci o nome da cidade, desculpa. Hã, ela começou agora, iniciou um mestrado, agora em 2023 também, conciliando também o trabalho, né, o estágio aqui com na SN. Eh, ela começou a trabalhar, acho que na SN no meio do ano passado, né, aí comentou que, eh, não fez o curso, né, de de curta duração, mas pelo fato de estar vendo, acompanhando as aulas, é como se tivesse feito 2 a 3 ou ou 4 cursos e realmente está adorando. Eu perguntei pra ela da diferença, né, por exemplo, das das aulas na na Unifesp, na na na Unesp, perdão, em comparação com as aulas aqui, ela falou que era abissal, é um nível de profundidade, de engajamento, de interesse, e acho que é isso, assim, resumidamente.
+Maravilhosa. Lê, você concorda com tudo? Algo a acrescentar?
+Sim, o nome da cidade é Álvares Machado.
+Álvares Machado, é isso aí. Que não tem shopping e tem 20 mil habitantes, né?
+Isso aí.
+Isso aí. Ela e mais 15 amigos moram lá. Maravilhosa. Muito bem, gente, a Lê então também é o ponto de contato pra vocês, como o Thanos comentou, ela trabalha aqui comigo e e assim como a Mabê, são duas meninas muito inteligentes que têm muito a agregar e elas que vão me dar o suporte aí quando eu começar a falar de estatística e algumas pessoas começarem a sofrer, a monitoria será com elas e, se for necessário, eu entro também, combinado? Então elas serão aí a referência pra vocês. Muito obrigada, Lê, bem-vinda e obrigada também pelo trabalho. Arthur, conta pra gente um pouquinho do que você lembra do Anderson.
+Ele tem um cachorrinho muito maravilhoso. Um pastor alemão, grandão, que o... que se sente presidente da casa, basicamente.
+É tipo o Bruce aí, né, que tá dominando.
+Tipo o Bruce. Esse aqui tá carente. É, o hobby dele atual é ver séries junto com a noiva, eles querem casar o quanto antes, o quanto antes for possível. E profissionalmente ele tá num desafio grande, capinando do mato grande pra conseguir estruturar a área de dados dentro da empresa.
+Hum. Muito bom. E aí, Anderson, quer complementar alguma coisa?
+Perfeito, perfeito, mandou muito bem.
+Perfeito, então, Anderson, seja bem-vindo, aproveite bastante e lembre sempre do nosso combinado que não existe pergunta burra, então questione. A frase que vocês vão me ouvir falar muito é: vocês estão pagando. Combinado? Vamos usufruir. E aí eu vou pedir pro Renan apresentar o Arthur pra gente.
+Vamos lá. O Arthur é um advogado. Ele comentou que trabalha com LGPD, né? Ah, ele é carioca. Ele veio pra São Paulo no início da, acho que no início da pandemia. Falou que chegou em São Paulo, teve a pandemia, então ele nem acabou curtindo muito os amigos ali de escritório. Ele tem uma particularidade bacana, que é vou ser bem amigo dele, que a esposa dele já foi aluna do curso. Então ele tem uma professora particular em casa, isso é bom. Ah, ele falou que Robby toca piano. Tá aprendendo a tocar piano.
+Ah, isso eu não sabia, que legal.
+E ele também tem um, tem dois dogs em casa, não vou me recordar o nome.
+A Dory e o Bruce.
+E e ele... os dois são adotados.
+São. Muito bem, a Dory frequentava minha casa, gente. O Bruce nunca deixaram comigo, acho que não tiveram coragem.
+Ele ele ainda não era vacinado, Adri.
+E era bebezinho, se deixasse
+Ele ainda não tinha vacina pra deixar.
+cavalo lá, coitado, não ia viver muito tempo mesmo. Maravilhoso. Arthur, seja muito bem-vindo. É, não vai ser fácil, eu te falei isso várias vezes, mas eu tenho certeza que você dá conta e professora particular em casa e amiga aqui também, então fique à vontade pra qualquer dúvida nos procurar, tá bom?
+Obrigado.
+Bem-vindo e obrigada. Bora lá. Eu queria que a Mabê apresentasse o Renan pra gente.
+Beleza, vamos lá. Eh, o Renan, ele é de São Paulo, ele tem um filho de 4 anos que se chama Arthur, inclusive, com TH. E-
+Um predio no outro.
+Sim, ele apareceu no vídeo, inclusive. Eh, ele fez uma- uma cirurgia no joelho recentemente, porque ele rompeu o ligamento, né, então ele tá parado de atividades físicas e- e etc. E disse que foi por isso que ele aproveitou pra fazer o curso agora, porque ele tá mais tempo em casa, então ele tem mais tempo pra pra estudar e tudo mais. Ele fez
+Porra, você soube otimizar o tempo mesmo, hein?
+Ele fez ciência da computação. E acho que é isso.
+Maravilhoso. Algo a complementar, Renan?
+É isso mesmo, resumiu bem.
+Perfeito. Então, bem-vindo, Renan, aproveite bastante e achei genial você usar o útil ao agradável, já que eu tô de cama, então bora estudar, não é mesmo? Já que eu não posso sair.
+É isso.
+Então é isso mesmo, muito bem. Um ótimo aproveitamento de tempo. Aí, ó, o Léo te perguntou aqui no chat se você se machucou jogando futebol, você pode responder pra ele ali no chat também. Eu vou seguir aqui, tá bom?
+É isso aí. Valeu, obrigado.
+Aí foi jogando futebol. Valeu então, muito obrigado e bem-vindo. Manda.
+Rodri, Rodri, posso fazer um aparte aí, por favor?
+Pode.
+Me parece que eu conheço o Renan de algum lugar. Ô Renan, por acaso você trabalhou na Tréveris?
+Sim, te conheço também, Genilson, da 4.
+Te conheço, cara.
+Aí pronto, são amigos de infância.
+Maravilha, legal.
+Maravilhoso. Depois vocês chamem lá no, no, no, no bagulho que a gente usa, o WhatsApp, e já troquem figurinhas aí.
+Perfeito.
+Muito bom.
+Muito bom, Li.
+É.
+Muito bem. Li, você apresenta pra gente o Marcelo?
+Com certeza.
+Que parada é essa aqui que apareceu, gente? Fui eu que coloquei isso?
+É isso.
+Vocês estão vendo isso aqui que apareceu na tela ou só
+Aham.
+que doideira.
+Tudo bem, né?
+Eu não sei o que é isso não, mas... Oia, tá no meio aqui. Eu vou tentar descobrir enquanto ela apresenta. Tudo bem, Li? Conta pra gente aí que que, que que você
+Eu conto.
+lembro.
+Marcelo, Marcelo é de São Paulo, ele é formado em construção civil, mas hoje trabalha como gerente de projeto. Hã, foi na discussão com ele que a gente teve a ideia aí de ter uma aula em inglês, porque a gente tava numa conversa lá do metaverso e uma, uma turma muito criativa aí, aí a gente precisa de alguma coisa que, um chip que já torne a nossa segunda língua já, assim. E aí até a discussão é, será que não é um negócio que a gente quer traduzir? E o Marcelo não quer traduzir, ele quer falar naturalmente, assim, então me parece valorizar aí a comunicação humana mesmo. Falou uma coisa muito interessante que, compartilhada por mim também, que o medo dele é ficar obsoleto profissionalmente, então foi o motivo que, que o levou a procurar, né, o o curso, e aí bem interessante da gente ter que reservar realmente uma parte da nossa vida pra isso. E... e aí é isso.
+Perfeito. Marcelo quer acrescentar alguma coisa?
+Não, tá certinho, certinho, só não é gerente de projeto, gerente de produtos, né, que tem uma uma vibe nova aí, moderninho.
+Boa.
+Tá tá super correto.
+Maravilhoso, Marcelo, seja bem-vindo. Gostei muito dessa frase que ela colocou, porque esse esse medo de ficar obsoleto é um medo de todos nós, incluindo todos nós professores. E e é uma coisa, gente, que eu acho que vale só fazer um comentário de que a gente tem que saber gerir esse medo e saber gerir muito bem, porque entrar num burnout, entrar num surto aí é dois palitos, tá? Só pra vocês terem uma noção em quesito, eu vendo os meus alunos, e aí eu vou, vocês vão ver que a gente vai ficar muito próximos, a gente vai trocar muito. É... hoje, olhando dados dos meus alunos, o que eu não vou compartilhar nomes, mas assim, metade dos meus alunos tratam depressão, tá, gente? E eu também saí de uma brava recente. Por quê? Porque essa área é cruel conosco, tá? Por isso eu falo muito de ter amigos, de ter com quem falar, da gente criar conexões, porque sozinho é muito difícil. Então, Marcelo, esse seu medo é compartilhado geral, assim, qua- quase, não vou dizer todos, mas boa parte dos meus professores tem síndrome do impostor, tem... e olha lá que são pessoas que vocês vão falar, caralho, como que esse filha da puta tem essa merda? O cara é mó bom, manja pra caralho. Mas lá dentro ele sofre igualmente qualquer outro. Então é um negócio que a gente tem que aprender a gerir, gente. Cuidem da sanidade mental de de vocês. Obrigada, inclusive, por essa oportunidade. Valeu, Marcelo, bem-vindo. Muito bom, eu troquei de tela aqui que essa troço apareceu e eu não faço ideia do que seja, eu não consegui tirar. Eu gostaria que a Thales apresentasse pra gente o Fernando.
+É... Adriana, Thalys, mas bom
+Thalys, meu Deus!
+pra quem for me apresentar, já faz a correção. É... então, Fernando tem um menininho pequenininho de 13 anos, com a brincadeira que ele fez. Ele formou em ciência da computação e hoje, atualmente, ele... Ai, cara, diz que ele mora no Rio Grande do Sul. É Rio Grande do Sul, sim, tá aí, Porto Alegre, ó, que ótimo. E ele é concursado do Banco do Sul, Ba- Bar- Banrisul. Atualmente, ele tá querendo... acho que alçar novos desafios, né, no sentido de talvez pro mercado privado ou fazer um novo concurso, eh... sem colocar palavras na boca de ninguém, mas talvez sentindo talvez estagnado, limitado, enfim. Achei muito bom essa ideia de... muito bom o que ele compartilhou sobre essas no- sobre o que ele quer, sobre essas, sobre ele querer alçar novos desafios na vida dele. E... foi isso. Eu acho que nisso a gente acabou desencadeando um papo sobre como, no caso, a Camila falou como meio que a formação dele, talvez mais esse curso, ele conseguiria muito fácil uma vaga, assim, de data s- data scientist, tem empresas de fora que pagam muito bem, né? Pagam no na moeda deles. Mas é isso.
+Maravilhoso. Foi o grupo que eu entrei, estavam falando de trabalhar aqui do Brasil pra outros lugares, né? Achei muito interessante
+Isso.
+a conversa.
+Isso aí.
+Perfeito. E aí, Fernanda, quer complementar alguma coisa?
+Não, só eh, só que eu tô eu eu trabalho na Procuradoria do Estado.
+Perfeito.
+Olha aí, falei errado.
+Não, tranquilo.
+O Curi, seu som não tá saindo, eu vi que você quis falar, mas não saiu, tá?
+É, não vai embora, Fernando. Não nos deixe.
+Trabalham juntos, gente, aqui a gente tem... O Fernando tá mutado, hein? Também vi que você falou, mas não saiu.
+Não, não, só dei risada.
+Fechou. Temos 3 que trabalham juntos, a Vi também trabalha junto com eles. Muito bom, Fernando, seja bem-vindo, sempre disponível aqui e espero que você aproveite bastante o curso e que implemente muita coisa lá, que o Cury vai tá doido, né? A gente já conhece o Cury.
+Ele já tá enlouquecido hoje em dia, imagina quando tiver já as técnicas todas aqui.
+Perfeito, tá, e é isso aí, mano. Muito bem, bem-vindo. Aslan, você conta um pouquinho sobre o que você trocou de ideia com o Lino?
+Opa, positivo. É... da mesma forma que eu, o Lino também é baiano, se entendi bem, né? Não, acabei não perguntando de qual região, mas pelo sotaque diria que ela é da região de Vitória da Conquista. Morou em Goiás, atualmente mora em São Paulo, né, atua há 4 anos com dados, se eu entendi bem, na área de seguros, é formado em ciência da computação, né, ou engenharia da computação, perdão, eu eu não captei, eu sei que é computação, né, atualmente trabalhando com dados na área de estatística, especificamente estatística, não é isso?
+E aí, Lino, tudo correto? Quer complementar?
+Você falou que você é baiano, tá tudo certo aí. Eu não, eu não ouvi entendido lá no, no, na nossa conversa não, e é realmente próximo à Vitória da Conquista.
+É? Aí, acertei. Qual cidade que é?
+Serra Dourada.
+Oh, legal.
+É bem pequeno.
+Ah, muito bom, muito bom.
+De Luiz Eduardo, Barreiras.
+Legal, muito bom. Meu tio era de Vitória da Conquista, por isso que eu achei o sotaque bem parecido, é igualzinho, você fala igualzinho meus primos.
+Tá em casa já então.
+Muito legal, muito legal.
+Fechou, seja bem-vindo, Nino, aproveite bastante, ainda mais agora que tá atuando com a com a estatística, vamos namorar com ela e ver o quanto ela é sensual, e a gente tá aqui pra te ajudar. Muito bom, bem-vindo. Eu gostaria que a Letícia, a Lê, apresentasse o Guilherme.
+Então, o Guilherme é, pelo que eu entendi, ele é do interior, só que agora ele tá no Rio de Janeiro. Eh, ele é físico, formado em física, eh, trabalha na UFR- não, ele é pós-doutorante na UA- pós-doutorante, doutorando
+Doutorando.
+na UFRJ e trava- eu não entendi muito bem com o que que ele faz como pós-doutorando, mas é modelagem alguma coisa, teve numérica, teve petróleo, teve bastante coisa.
+Bora lá, Guilherme, compartilha com a gente. Gente, nós temos um pós-doc dentro da nossa turma, então pra vocês verem o nível elevado aqui de conhecimento. O Guilherme, pelo que ele falou lá no grupo e das minhas conversas com ele, ele veio muito em trás, atrás desse networking, né, de conhecer pessoas e de se familiar- familiarizar dentro do do mercado de trabalho, porque ele sempre esteve ali dentro da universidade. Mas o que que é o seu pós-doc hoje, Guilherme?
+Ah, é sobre modelagem computacional de sistemas de engenharia. Modelagem computacional é basicamente é botar uma porção de computador pra fazer, pra fazer conta de um sistema de engenharia, né, como se tivesse simulando ele, né? Porque, bem, eh, vamos botar assim, pra você construir um prédio pra ver se cai é complicado, né? Fica um pouco caro, então você simula as condições pra saber se a estrutura aguenta, né? Seria mais ou menos isso, né, botando de uma forma simplista, né? Mas, bem, como o Adri disse, eu sou podotorano, eu sou um desempregado Nutella e tô aí tentando me inserir nessa área, que ela é muito motivante. Eu acho que já é não só o futuro, mas já é o presente. Acho que não tem muito pra onde fugir. Hoje, assim, hoje você se adapta à cultura data driven ou você tá fora.
+Exatamente. Muito bom, Guilherme, seja bem-vindo. E essa frase foi novidade aí pra mim, desempregado Nutella, e o bicho é inteligente pra caramba, né, gente? Então a gente tem muita coisa pra aprender ali também. Muito bom, Guilherme, aproveite bastante, que você consiga fazer muito networking e que oportunidades surjam aí, e seguindo o mesmo passo do PH, né, que foi nosso aluno e conseguiu se colocar no mercado também. Maravilhoso. Foi não, é nosso aluno, né? Muito bem. Bora lá, Bruno. É, não, como é que eu me perdi aqui no meu? Vamos ver. Ah, o Lino. Lino, você conta um pouquinho sobre o que você trocou de figurinha com Jesus?
+Papai Jesus é, trabalha na área de de segurança, casado, tem uma filha, trabalhou também na prefeitura de Barueri, se eu não me engano, eh, foi professor também e ele tá no curso aí à procura de, eh, adquirir as técnicas pra, pra aplicar aí na área de a- de atuação dele, né, que é de cyber.
+Maravilhoso.
+Eu acho que basicamente é isso, ele mora em São Paulo. É isso mesmo? Eu falei besteira aqui?
+Não, falou certinho. Isso, o Arthur Pessoa tá perguntando se é segurança da informação. Sim, segurança da informação.
+E trabalha com isso há anos, hein, gente? Veio aqui pro curso exatamente com a proposta de trazer novidades lá na área dele e fazer melhorias, né? Genial, eu adorei.
+Eu, eu já assisti até lá na, na plataforma, acho que o Arthur falando de LGPD e tudo mais lá no, no meeting.
+O Cui.
+É, é esse mesmo.
+Maravilhoso. Bem-vindo, Jesus, aproveite bastante e troque bastante figurinha aí, que a galera, a gente tá vendo que tem muita coisa em comum, né? Muito bom.
+Obrigado.
+Perfeito. Obrigada aí por ter aceito a a jornada. Muito bem. Bruno, aí temos dois Brunos, então eu vou chamar pelo sobrenome. Bruno Servilha, por gentileza, você pode nos contar um pouquinho sobre o Aslan?
+O Aslan trabalha hoje na na Transpre- na Transpetro, né, que é uma subsidiária da Petrobras. Ele já foi aluno da Adri algumas vezes, aí na jo- na jornada no MBA da Esalq e em alguns outros cursos de curta duração e tals. Hoje ele tá se especializando na área de ciência de dados, né? Ele tem experiência na área de contabilidade, administrativo e no se- no setor público também, e hoje ele tá buscando aí se especializar na área de dados. Não sei se ele quer complementar mais alguma coisa. Ele é de São Paulo, de São Paulo.
+Perfeito. Nasceu lá na Bahia. E aí, Aslan, quer complementar alguma coisa?
+É isso mesmo, tá, tá corretíssimo.
+Perfeito, então, Aslan, bem-vindo novamente. Sigamos na jornada, 2 anos e meio pra você, hein? Não só pra você.
+Exatamente.
+Mas demorou. Muito bom, Madan, bem-vindo de novo.
+Obrigado.
+Raquel, você conta um pouquinho sobre o que você trocou de ideia com a Aline?
+A Aline, ela... ela é uma estatística formada, recente, mas ela tem a... a competência de também ser da área de saúde, então é dupla competência, né?
+Tipo uma Florence Nightingale.
+Não é, gente? Poxa, é a nossa aqui. E ela tá, tá trabalhando agora na no Hospital Sírio Libanês, ela conseguiu entrar no mercado na área de de data science, né, tá como analista de dados lá. Ela queria essa migração, mas ela passou pela linha de frente durante o Covid, eh, passou por esse estresse, por toda a emoção, por toda a questão envolvendo a pandemia. Eh, ela tá aqui pra poder aprender mais, porque ela gosta muito dessa área de tratar dados, que foi o que o tratamento de dados da- que ela teve a experiência em em estudos, que ela teve experiência de de adquirir, ela foi assim que ela se descobriu e viu que era uma boa seguir pra pro lado, o lado da força.
+Maravilhosa. E aí, Eli, certinho?
+Perfeito, é isso mesmo.
+Maravilhosa, seja bem-vinda, Eli, aproveite bastante.
+Obrigada.
+E fique à vontade sempre pra perguntar. Muito bom. É... Pedro, você conta pra gente que que que você trocou de ideia com a Laís?
+Vamos lá, Laís, é formada em estatística, é, tem pouca experiência profissional, tá em busca aqui de conhecimento, tava em dúvida pra caramba aqui entre o MBA lá da USP, Exalc e fazer o curso, por aí vai, a gente falou que ela fez a melhor escolha, dado que eu já fiz o curso da Exalc. É uma pessoa nova, tem 22 anos e tá com muita vontade de ir a mercado, de aprender, de encontrar seu lugar no sol. Tá, até já mandei aqui, já tô com o WhatsApp dela, a gente já tá falando no WhatsApp, vou ver se eu consigo indicar ela aqui no banco.
+Maravilhoso, Laís é muito boa, pode indicar que eu assino embaixo. A gente teve uma experiência junta e a menina sabe para o que veio, muito boa. Laís, quer complementar?
+Não, acho que é isso.
+Ela tá rouca, ela tá triste hoje, ela falou que xinga pra cacete, mas hoje tá triste, ela falou que aprendeu contigo, Dri.
+Ai, meu Deus, isso é um perigo. Bem-vinda, Laís, e brilhe, viu? Gosto muito dessa menina, gente. Muito bom. Então, bora lá. Agora eu vou pedir pro Cury apresentar a Raquel. Pera aí.
+Aí, achei o botão. Tava procurando o botãozinho. Bom, a Raquel, como o sotaque não, não, não, não mente, né? A Raquel é do Rio de Janeiro. Ela trabalha, formada em administração, mas ela também, ela trabalha como analista de dados numa empresa que trabalha com pagamentos. Se não me engano, é link de pagamentos, né? Uma empresa, eh, que começou inovando muito nessa área aí. E, se eu não me engano, né, Raquel, trabalha com combate à fraude, não é? Tá. E a Raquel tava, tá, a gente trocou umas ideias ali, tá um pouco ansiosa com a parte de... da da estatística aí, porque ela se aventurou numa numa faculdade, mas aí viu que não era o momento. Aí a gente até falou que o importante é entender a intuição do cálculo racional, porque o cálculo mesmo o computador faz pra gente, né? E aí, vai ser legal aí trocar essa experiência.
+Maravilhosa. Raquel quer complementar?
+É isso mesmo, é a empresa se chama Pagarme, que é uma das empresas do grupo Stone. É a parte de pagamento de e-commerce, e eu sou da parte de antifraude, analista de antifraude.
+Maravilhosa, vai poder aplicar tudo que a gente viu aqui. E eu gostei da fala que o Cury colocou, que é isso mesmo, gente, o nosso objetivo, vocês vão ver cada professor usando um termo. Eu falo, vamos sentir o que isso quer dizer. Outros professores vão, vamos pegar a intuição, vamos, vamos, vamos entender o que que essa porra serve. É, é esse é muito do nosso propósito, a gente vai entrar bem na entranha pra gerar esses sentimentos internos, pra gente se sentir dono daquilo. Então vai ser uma jornada divertida, Raquel, você vai ter um domínio bem grande sobre esses modelos todos que você sonha em aprender, então tô ligada. Bem-vinda, Raquel, aproveite bastante. Aí eu vou pedir então pro Jesus apresentar o Bruno.
+Bom, vamos lá. Hã... o Bruno, ele trabalha num grande banco que tem o símbolo vermelhão. É difícil não saber, né? Hã, ele trabalha na área de fraude e um pouco da minha área de cyber. Hã, mestrado e doutorado, então parabéns aí pela, pelo grande desafio, temos até pós-doc na, na turma. Hã... Ah, se eu não me engano, acho que mora em Osasco. E basicamente isso que eu lembro que eu entrei atrasado hoje. Eu já paguei as 50 flexões, viu, Dri?
+Pois, combinado. E aí, Bruno, o que?
+Eu moro em São Paulo, na vizinhança de Osasco, né, mas trabalho no banco, no Banco Vermelho Grande de Osasco.
+Agora ficou muito mais difícil, né? Maravilhoso. Bruno,
+Eu trabalho.
+bastante.
+Eu trabalho no departamento de segurança corporativa, né, com prevenção à fraude, PLD, agora estamos entrando aí nessa parte de segurança cyber, versão de acessos, mas tudo
+Com Jesus, então vocês têm muito
+Tudo risco, tudo gerenciamento de risco.
+Maravilhoso. Muito bom, Bruno, seja muito bem-vindo, aproveite bastante. Si, você apresenta o Denis pra gente? Valeu.
+É, bom, o gêmeos, ele já falou, né? O Genilson tem, é, trigêmeos. Ah, acho que são duas meninas e um menino, então ele já é um guerreiro por si só. É, ela já tem agora, ele já tem 11 anos. É, ele vem da Bahia, mas já mora muitos anos aqui em São Paulo. Não esperava ficar tanto tempo, mas acabou ficando. Hã, ele é da área de TI, trabalha com análise de sistemas, hã, tem pós em TI e ele, eh, tá atualmente como coordenador de BI, estruturando uma área, eh, dentro de uma seguradora, eh, e ele já trabalha há mais de 30 anos na área de seguros.
+Certinho aí, Gênesis? Tá mutado?
+Perfeito. É isso mesmo. Muito bem sentida.
+Muito bom. Seja bem-vindo e obrigada, Si. Muito bem. Fernando, eu vou pedir pra você apresentar a Thalise e vamos torcer pra não ter falado errado, que eu morro de medo de falar o nome dela. Até na entrevista eu perguntei duas vezes.
+Fala correto, fala correto.
+Ai, maravilhosa. Eu tô aprendendo, Thalís, me perdoe.
+Não, nada.
+Então vai lá. Fernando, você consegue nos contar um pouquinho o que que você
+Consigo.
+trabalhou com ela?
+Hã, a Thalís é de Brasília, né? Ela é, tem formação em ciência política, até é bem curioso, assim, meio fora, assim, do resto do pessoal daqui, né? Hã, ela trabalha assim, hã, com, hã, não foi essa palavra que ela usou, é, é um lobby do pes- hã, do pessoal do agro.
+É literalmente isso, né?
+Ai, desculpa, deixa eu te te terminar de falar.
+Não, a a fica bom, né? Hã, e tá fazendo aqui pra pra auxiliar ali, questão de tomada de decisão, tudo. Achei, achei bem interessante.
+É, eu confesso que também na hora que a gente fez a entrevista, eu achei, eu falei, nossa, ó, os professores não vão te contribuir exatamente nessa área, porque ninguém tem essa experiência, mas que da hora, a gente quer ouvir você depois contando pra gente onde você vai usar.
+Ah, com com certeza vai agregar aqui pro pessoal.
+Com certeza. Maravilhosa, Thalys, quer complementar?
+Não, era era isso mesmo, é a frente parlamentar do agro, mas colocou em termos bem práticos, seria o lobby do do agro mesmo. E e é isso, eu tô bem animada e não, tem que terminar o tempo aí, gente, é isso, tô com o tempo, eu vou contribuindo.
+Maravilhosa. Seja muito bem-vinda, aproveite bastante. Muito bom. Bruno, agora eu tô falando do Bruno Futata, você pode apresentar pra gente o Júnior?
+Posso, posso sim. O, o Júnior, ele é, ele é formado na área de TI na pela Impacta. Ele, ele já trabalha na área de data science, numa, numa farmacêutica, se eu não me engano, alemã. É, ele já tá com, nos trâmites aí, no nos finalmentes pra ir pro Canadá, então logo mais é, ele vai tá no no fuso um pouquinho diferente. É, recentemente ele, ele apresentou um projeto, acho que foi um dos maiores desafios dele ultimamente, é um projeto que que ele tocou, desenvolveu, né, e e implantou, e ele teve que que apresentar esse projeto pra uma audiência aí de 20 pessoas de diversos países e acho que é bem bacana aí, né? Além de trabalhar muito bem, fazer, dar resultado, é saber se vender também, que no final das contas é o, é o que traz o, o reconhecimento maior, né?
+Eu gosto disso aqui, né?
+É, então. E ele já, já, já, já se aventurou aqui pelos rodeios de Americana, eu acho que é isso.
+Maravilhoso. Júnior, quer com- completar alguma coisa?
+É, ele, o Bruno falou que eu me vendi, mas na verdade eu acho que eu coloquei um, um alvo nas minhas costas, que eu mais critiquei o projeto do que elogiei, né? A gente tá passando uns perrengues aqui no Brasil e o pessoal do global não ajuda muito, então... Mas foi muito bom, foi meu maior desafio, assim, apresentar uma audiência in- internacional e mal dormi, mas foi legal, valeu a pena depois.
+Já vai treinado, então, é isso aí. Muito bem-vindo, Júnior, aproveite bastante e a gente se vê lá no Canadá.
+Estamos juntos.
+Demorou. Bora lá. Léo, você apresenta o... meu Deus, eu tô com medo de pronunciar os nomes diferentes errados, mas o Thanos, Thanos. Vou conseguindo.
+Eu vou, eu vou, é... ficar com a informação de que é igual do do Avengers. Então é
+É isso aí. Thanos, é isso, boa, vai lá.
+Então, o Thanos, ele é formado e trabalha na área de ciências atuárias. Então, ele ajuda aí empresas, principalmente do ramo de seguros, a... a precificar, a gerenciar ali seus processos. Então, é algo bem complexo. E ele mora em São Paulo, São Paulo capital. Já trabalhou na área de dados, já trabalhou na área de BI. Então, um cara que tem bastante conhecimento, tanto em estatística como também em na apresentação dos dados, em como, em como atuar aí nessa área. E é isso.
+Perfeito. Quer complementar alguma coisa, Dano?
+Não, não, o Charles tá certo. É, bom, sou formado em atuariais, trabalho com a parte de precificação de seguros de automóvel, né, então envolve bastante modelagem e tô muito animado e ansioso pra começar o curso aí com vocês.
+Maravilhoso, perfeito. Seja muito bem-vindo e muito obrigada, Léo. Bora lá, Eduardo, você conta pra gente um pouquinho sobre o Luiz?
+Beleza. Luiz Campos. É, ele trabalha no Banco Mercantil, tem 29 anos, é engenheiro de produção, era algo em comum que a gente tinha. É, morou um ano e meio nos Estados Unidos, já foi funcionário do Banco Inter, acho que por 5 anos e 11 meses, ou foi 6 anos, eu não lembro. E ele é da área de BI, risco de crédito, risco de consignado, alguma coisa assim. É formado pela PUC, também tem pós pela PUC, e esse um ano e meio que ele passou nos Estados Unidos foi fazendo a graduação sanduíche na universidade lá. Acho que eu acertei, Luiz, não sei se acertei tudo.
+Acertou na música, do ar. Certinho.
+Luiz, seja muito bem-vindo. Luiz veio porque um dos nossos professores trabalhou com ele, né? Acho que era o líder da área e ele admirava o Danilo. Vocês vão adorar o Danilo Coelho, é um professor do caralho, vocês vão amar, inclusive, e veio por indicação. Espero que você goste bastante, Luiz, não só do Danilo, que você já admira, mas de todos os outros professores. E qualquer coisa você me procura que eu tô aqui pra dar assistência, tá bom? Obrigada, seja bem-vindo. Bora lá. Eu vou pedir então pra Laís apresentar o Bruno.
+O Bruno é de Americana, formado em ciência da computação, hoje trabalha na Tetra Pak e ele fez, perdão, e ele fez o MBA da USP e hoje tá aqui querendo aprender mais com você. Acho que é isso, resumi bastante.
+Maravilhosa. Quer complementar alguma coisa, Bruno? Tudo que você falou é verdadeiro,
+É.
+que eu já conheço o Bruno também.
+É isso aí, tá certinho. É... na na verdade eu tô de tô em Americana, mas eu tô pra pra mudar pra Santa Bárbara, então tá tá certo também.
+Perfeito. Muito bem, Bruno, seja bem-vindo, aproveite bastante, que complemente aí sua formação lá da USP. Muito bom.
+Obrigado.
+Valéria, você conta pra gente um pouquinho sobre a Ca?
+Oi, oi. Bom, eh, a Camila começou a se aventurar na engenharia civil, mas aí ela já tava trabalhando, eh, com outra coisa, assim, com dados e tudo, e aí ela ficou meio decepcionada com o concreto, de ma- de dia trabalhava com uma coisa, de noite ia pra faculdade. Eh, e aí começou meio que a entender que a engenharia civil não era dela e procurou alguma coisa que, que fosse alguma coisa que interessasse e acabou, eh, fazendo um curso, eh, de base de dados e continuou a trabalhar na área, né? E aí tava meio assim, querendo desenvolver mais, né? E uma das escolhas então foi fazer o seu. É... ela tem um noivo. Isso, eu entendi que ela tá se preparando pra casar, né?
+Maravilhosa. Muito bom. O Ca quer complementar?
+Creio que é isso.
+É isso mesmo, Valéria, falou certinho. Aí eu só vou complementar apresentando pra vocês o Bud, que ele é muito meu companheiro aqui.
+Ah, meu Deus.
+De trabalho. É meu presente de aniversário há 2 anos, e é isso, mas a Valéria falou certinho.
+Perfeita, seja muito bem-vinda, Ká. Aproveite bastante e use aí o recurso pra entender esse mundo complexo, mas você tá com um super apoio aí de todos os professores.
+Muito obrigada.
+Muito bem-vinda. Valeu, obrigada eu, obrigada Valéria. Bora lá. Eu queria pedir pro Marcelo falar o que que trocou de ideia do Cury, com o Cury.
+Pô, vamos lá. Cury, papo super divertido. Cury, ele é paranaense, se não me engano, mas já tá morando há uns 10 anos no Rio Grande do Sul. Ele trabalha na área da Procuradoria do Estado, trabalhando com a parte de dados lá dentro. Tá começando a implementar uma parte mais racional pra ajudar no processo de tomada de decisões. Eh, assim como eu, ele também compartilha de algumas preocupações de obsolescência, tá sempre muito ligado à à inovação, então a gente falou de metaverso, a gente falou de realidade aumentada, eh, eh, inteligência artificial, generativos, usos do chatGPT, é, integrados ao óculos da Apple. Ah, então acho que é isso, né, Cui? Me diz se eu, se eu falei certinho.
+É isso aí, eu tô na PGE trabalhando com essa parte de dados. É, na verdade, eu faço mais a parte de, de análise de negócio e quem mete a mão na massa mesmo, na parte de modelagem ali, por enquanto, é o Fernando, que trabalha junto comigo, e a Virgínia também, que vai que mais focada, acho que em estatística, ainda não chegamos na parte que ela vai brilhar. A gente tá montando os ban- o modelo de banco de dados ainda, mas estamos trabalhando duro nisso aí, todo mundo junto.
+Maravilhoso, seja bem-vindo. O Cury já foi meu aluno e, inclusive, reforço aí que tem lá o meetup dele falando sobre LGPD. Foi uma aula muito legal, vale vocês assistirem. Agora vocês já estão com acesso lá no Moodle. E Cury, de novo, muito obrigado pelo prestígio, obrigado por ter voltado e agora encarar o curso maior. Boa sorte aí, que a gente vai sofrer juntos, mas vamos nessa. Demorou. Muito bem. Eu queria pedir então agora pro Plínio falar um pouquinho sobre o que que trocou com o Rafael.
+Beleza. O Rafael, ele é do Rio, carioca, trabalha com ciência, ele é formado em ciências a- atuariais, né? Trabalha numa empresa... eh... Numa empresa... é... segurado- acho que é uma seguradora, né? Agora tô...
+É isso aí.
+Isso, seguradora, seguradora.
+Seguradora, né? Hã... explicou, né, que o Ciências Atuais é uma... apesar de ser, para algumas pessoas pode parecer novo, mas é um curso antigo, estava principalmente ligado a faculdades públicas. É um curso que mistura estatística, né, matemática, mas aplicado à gestão de riscos, seguradora, hã, e tem um papel também, acho que... eh, legal, né, de as- de as- de de acho que assinar documento, né, validar uma espécie de contador, né, pelo que eu entendi, para algumas coisas que precisa, né, de um de um atuarial. Hã, acho que é isso, né? Ver aqui.
+Demorou.
+Mas é isso.
+Rafael, quer complementar algo?
+Não, é isso. Só pra explicar o que o Pino falou aqui. Na verdade, expliquei que numa seguradora você precisa ter atuários pra assinar um balanço, enfim, porque existe toda a parte de passivo e provisão técnica que é calculado por um atuário e tem que ser um atuário.
+Pela lei, né? Tá certíssimo. Muito bom. Rafael, aproveite bastante e... e com certeza vai curtir um monte e linkar com tudo que você já viu aí, que a gente até conversou sobre isso na entrevista, né? Bem-vindo. Muito bom. Guilherme, você conta a sua troca com o Léo?
+Opa! Vamos lá. É, Léo de Campo Grande, aqui de Mato Grosso do Sul. Ele formado em a- em administração, ele trabalha como analista de BI no hospital e tá nessa empreitada aqui, acho que acredito como quase todo mundo, por né, na busca aí por expandir conhecimento e se adaptar a toda uma nova era que tá vindo.
+Maravilhoso. Léo, perfeito isso aí?
+Já trabalhei no hospital. Agora eu trabalho numa, numa empresa de desenvolvimento de software pro governo, mas adoro a área da saúde.
+Perfeito. Muito bom, Léo, seja bem-vindo, aproveite bastante. Bora lá, Ju, você conta um pouquinho da troca que você teve com a Vi?
+Oi, vamos lá. A Vi, ela, se eu não me engano, é do Rio Grande do Sul. Ela é descendente de poloneses, eh, fala francês, inglês, ela adora estudar línguas. Eh, ela tem acho que um gato, não lembro se era um ou mais, enfim. Gosta de plantas, cactos e especificamente. Eh, ela estudou ciências atuariais e ciências da computação. Atualmente ela é é concursada, pelo que eu entendi, ela trabalha na procuradoria, acho que alguém mencionou que trabalham juntos,
+O Cury.
+que era o Arthur, né? Se eu não me engano.
+É o Cury, o Cury, estão trocando tudo, os Arthur e Cury aí, já começou a loucura já.
+Colega também aqui.
+Ela ia pro Canadá, mas aí na época não deu certo e acho que é isso.
+Perfeito. Vi, quer complementar algo? Ela trabalha junto com o Cury e com o Fernando, exatamente, são os 3 juntos.
+Ah, hã, eu vi que tem um pessoal que tá indo pro Canadá, eu eu ia complementar que bem na época eu passei no concurso, o meu processo de imigração estava em curso. Aí teve uma mudança de regra, que à época ia custar mais caro, porque eu ia entrar pela regra antiga. Daí, como eu já tinha passado no concurso, eu não continuei no processo.
+Ou já foi.
+É, daí eu fiquei só com... ah, estudei na Aliança Francesa, fiz aqueles testes, pá pá pá, pá pá pá, todo esse trajeto que acredito que vocês, alguns de vocês estejam fazendo. Aí eu tava pensando em ir pro Quebec ou pra Montreal, mas mais pro Quebec, a cidade antiga que é muito bonita. Mas aí eu passei concurso, acabei ficando, tô, tô satisfeita ali com, com esse curso que a PGE tá oferecendo, então, por enquanto, não estou pensando no Canadá.
+Ah, eu vou te convencer, você vai ver.
+Não, nem nem.
+Tá, o Cury tá fodido então.
+Não, não, vocês parem.
+Deixa
+O Quebec, o Quebec te quer, Vi. Ele te quer porque agora eles estão facilitando pra quem fala francês, então vamos conversar.
+Aí, o Cury tá fodido.
+Vou parar de trazer gente pra fazer curso.
+Não, tem que pensar no bem dela. Se ela tá feliz, tá tudo certo.
+Muito bom, Vi. Então aproveita e já me conta um pouquinho da sua troca com o Eduardo.
+Ah, o- o Luiz Eduardo. Hã... Luiz Eduardo, hã, pelo pouco que nós conversamos, hã, me pareceu uma pessoa, eh, é muito interessante, é muito falante, assim, simpático. Ele é de Pernambu- ele está em Pernambuco e não tem nem 40 anos, mas já tem uma vasta experiência como um empresário, já viajou pro praticamente, acho que o mundo, se não o mundo inteiro e o Brasil também, sempre trabalhando com dados, hã, analisados de indústrias, né? Eu acho que ele trabalha na parte de engenharia de produção. E agora ele tá dando uma, uma, um descanso nessa vida louca de empresário pra se especializar em análise de dados, que é um, que é tá muito dinâmica essa área, né, tá se especializando, então eu acho que é um uma parada, hã, importante, né? Não tem nem 40 anos ainda, é um é um rapaz, um jovem, casado, não tem filhos ainda, é tudo pela frente ainda. Mas eu acho que
+Exato, mas quer ter, tá aí na fila, né?
+É. E aí ele tem alguns hobbies muito interessantes, aí eh bonsai, plantas carnívoras, criação de abelhas, hã.
+Olha isso, gente.
+Sou uma pessoa interessantíssima, ótimo colega.
+Maravilhosa.
+Obrigado, Vi. Eduardo, tudo, pelo que eu te conheço também, tudo bem perfeito, né?
+O meu mini zoológico tá aí dentro.
+É isso aí, aceitou.
+Maravilhoso.
+Valeu, Vi.
+Eduardo, seja muito bem-vindo, e Vi, muito obrigada. Vou pedir pro Luiz contar um pouquinho sobre a Ju.
+Então, a Ju, super legal também o papo com ela. Ela é formada em estatística na na Unesp, se eu não me engano. Ela trabalha na Claro, na parte de política de crédito, que eu faço também um pouquinho. A gente já trocou algumas figurinhas, ba- é legal demais. Ela tem esse contato, ela com com com cientistas de dados que fazem os modelos, então ela fica nessa parte de negócio, nessa na interação com eles, ajustando também, monitorando. Ela é de Prudente, São Paulo, perto de Prudente, na verdade, esqueci o nome da cidade, mas eu anotei Prudente, que é pertinho lá. Ela é casada e ela é mãe de planta. Acho que é isso.
+Maravilhosa, Ju foi minha bichete. E aí, Ju, quer complementar?
+Sim. Eu vi que tem o pessoal da região aí, a Lê é de Machado, eu sou de de Epitácio. E mãe de planta que tá quase dando filhotes, tem, eu tenho tomatinhos, então eles estão, tem vários raminhos com com vários tomatinhos já.
+Ai, aí você e o Eduardo vão se dar super bem também, mano.
+Né? A gente com- ficou conversando de planta aqui.
+Maravilhoso, olha que louco. Muito bom, Ju, seja bem-vinda, aproveite bastante. Pamela, você conta pra gente um pouquinho do que você trocou com a Si? As velhas.
+Claro. Eh, a verdade eu fiquei bem impressionada com com a Si. Ela fez, eh, é formada em, em letras, eh, e ela fez já muitas contribuições para a educação brasileira. Ela trabalhou em escolas, eh, tentando de- democratizar também o inglês em escolas, eh, públicas. Eh, participou de um projeto que se chama Sin, Sin Frontera. E, eh, falando um pouquinho dela, o parceiro dela é português. Ela tem uma filha de de 12 anos, que se chama Isis, 2 gatos e um cachorro.
+Maravilhosa.
+É isso assim.
+Isso mesmo.
+Perfeita. Eu adoro assim, gente, ela foi minha aluna também, eu adorei dar aula pra ela, que ela pergunta um monte de coisa, é super interessada, nos feedbacks sempre vinha um monte de coisa porque estudava, gosto disso. E Pâmela, parabéns, super entendido e todo mundo te entendeu também. Então, tamo junto aqui e muito obrigada pela contribuição. Gente, a Carol, ela não pôde estar aqui hoje, que ela tá num evento a trabalho lá em Brasília. A Carol, ela é formada em direito ali pela UNESP e ela tá agora trabalhando na Caixa Econômica, inclusive com um veterano meu, e aí ela precisa muito aprender essa parte de modelagem, foi por isso que ela veio no curso. Ela já foi aluna minha num outro curso, e vocês viram que eu roubo aluno de tudo quanto é lugar, né? E aí ela gostou, veio pra cá e agora vai fazer esse curso conosco também. Então, Carol, você vai ver a gravação depois, seja bem-vinda, aproveite bastante e super dedicada também do do do que a gente já conversou, já vi que ela vai se empenhar bastante aqui nesse. Muito bem, Rafael, você conta um pouquinho sobre o Plínio?
+Conto sim, vamos lá. Bom, o Plínio, ele começou fazendo engenharia civil, se eu não me engano. Eh, no meio do caminho ele desistiu, viu que não era isso, mudou pra administração e já há um tempo, bastante tempo, ele trabalha com na parte de de de analytics, né, de dados, enfim. Eh, ele trabalha também naquele bancão vermelho. Eh, deixa eu ver, deixa eu tentar lembrar mais. Acho que é isso, não tô... É, já fez várias pós-graduações, pelo que eu lembre também, eh, inclusive em big data, eh, mas ele tá afim agora de entrar mais no mundo da estatística, pelo que eu lembre. Acho que é isso, né, Plínio?
+Inclusive com a gente, o Plínio, a Sil, a Zana, os 3 alunos que mais mandavam feedback com pergunta, adorava. Quer complementar, Plínio?
+É isso aí, falou bem. Valeu.
+Maravilhoso, então tem até amigo de firma aí, né? Seja bem-vindo, Plínio.
+É nós.
+Dá-lhe 2 anos e meio pra nós. Fechou. Ká, você conta um pouquinho sobre a Valéria? Aí eu tô falando da Camila Calixto, tá? Porque temos duas Kais, né?
+Conto sim. Bom, a Valéria, ela é de Brasília. Ela já trabalha com com os dados. Atualmente ela tá, se eu não me engano, pelo que eu notei aqui, no Tribunal de Contas da União, lá em Brasília. Ela tem um filho de 9 anos, ela é casada, mora perto dos pais, então ela dá bastante apoio a eles. E, eh, ela é engenheira química, né, e contou uma coisa que eu achei bem bacana, que ela falou que morou na Bélgica também. Acho que é isso aqui que eu anotei. Falei certo, Valéria?
+Perfeito, olha lá. Muito bem, Valéria também já foi nossa aluna, sei que é super estudiosa. Valéria, seja bem-vinda aí pra uma outra jornada, agora de- depois de um tempo, né? E bora lá pra mais 2 anos juntas. Bem-vinda, muito obrigada e obrigada, Ká, pela apresentação.
+Imagina.
+Muito bom. Júnior, você conta como foi a sua troca com Pedro?
+Claro, eh... bom, o Pedro é carioca, é da gema, eu acho que dá pra falar. Ele tem duas filhas, é... eu lembro que uma é se chama Helena, a outra eu não lembro. Ele trabalha naquele banco Bocon BBM, que é um banco chinês, e hoje ele tá liderando um time, acho que aprox- aproximadamente de 30 pessoas e tal, e ele conversa com todo mundo no banco e o o intuito dele é poder, eh, ter conversas e justificar o que ele propõe ali, utilizando dados e tudo mais, né? A gente teve uma grata surpresa que ele também vai pro Canadá, 20 e 25, então a gente já tá trocando figurinha aqui. Daqui algum, não sei quantos dias, ele vai também pra Londres, vai fazer um curso lá, então dá pra perceber que ele tá muito focado não só em trabalhar, mas também na formação, o que me admira bastante. E eu acho que é mais isso, assim, é, não sei se, deixa eu ver aqui se faltou alguma coisa, é isso.
+É isso, Júnior, é isso daí mesmo. Só o nome da minha filha, que é mais velha, é Pietra, tá? Aqui em casa faltou criatividade. Eu me chamo Pedro, a filha Pietra, minha esposa se chama Ellen, a outra filha Helena. Criatividade aqui é zero. Tá, mas é isso daí tudo mesmo. E o curso é pra preparar pra jornada no Canadá também, né? Muito mais até pra isso.
+E a Luísa, hein, gente? Só faltou Luísa nesse grupo, eu vim pro Canadá também, né? Que eu penso, já foi uma gangue. Não sei se a minha piada foi muito velha, mas vocês lembram disso, né? A Luísa tá no Canadá, né?
+Ai, eu lembro, gente.
+Sim.
+Ninguém riu, eu falei, porra, ninguém deve saber do que eu tô falando, então fechou. Boa, piada de merda, vai lá. Obrigada, Júnior, bem-vindo, Pedro. Aproveite bastante o curso e com certeza vai te ajudar muito lá e depois na outra fase você compartilha com a gente no grupo aí também, como que tá sendo. Genis, você conta pra gente sobre a Pâmela?
+Sim, claro. É, então, como todos já, já de- já sabem, né, a Pâmela é do México e ela, ela teve uma experiência aqui no Brasil, morou durante um tempo aqui no Brasil, né? Ela trabalha no Nubank, ela, a formação dela é estatística, né? E hoje ela tá tocando a, acho que a área de data science do Nubank lá no México. Ela tem pretensões de voltar pro Brasil, ela gostou muito do Brasil, né? E e ela tem uma experiência também na Coreia, que é algo muito interessante, né? E enfim, ela, ela... Hum, ela gosta de ler. Ai meu Deus, agora eu me pegou que eu não sei se é literatura ou é, eu não lembro. Mas ela gosta de ler, enfim, né? Não tem animais, mas ela falou que tem um gato da irmã que sempre pula nas costas dela. E e é isso, é isso.
+Maravilhosa.
+Mais ou menos isso. Você esqueci alguma coisa, Pamela?
+Boa.
+É, é isso, na verdade, só que eu não gosto muito de ler.
+Ah, tem desculpa.
+É, é o contrário.
+Maravilhosa. Muito bom, bem-vinda, Pamela, aproveite bastante. Espero que você curta a jornada e lembre aí que, se tiver qualquer desafio em relação à língua, interrompa e questione para que a gente possa fluir junto, tá bom? Bem-vinda e muito obrigada. Aí agora a Camila, a a a Camila K. Machado, eu vou pedir para apresentar o Jorge, por favor.
+O Jorge, ele é de São Paulo, ele é engenheiro mecânico. Uma curiosidade bacana é que ele já morou na França. Ele trabalhou muitos anos com marketing e vendas, e há uns 5 anos, aproximadamente, ele montou uma consultoria voltada pra trade marketing e virou uma consultoria em pricing. Ele tem uma filha de 12 anos, que tem o mesmo nome da minha bebê, a Sofia, e a filha dele mora aqui em Porto Alegre. Então o happy hour tá feito porque eu sou de Canoas, no Rio Grande do Sul, então a gente já tá marcando o happy hour aqui. E o legal do Jorge é que a gente tá no mesmo barco, assim, a gente sabe pra que que funciona, sabe, ah, pra essa problema de negócio a gente pode usar uma árvore de decisão e acabou. Daí a gente não fala mais porque quem faz o modelo, a gente é vendido, a gente acredita, não sabe nem porque não sabe como funciona a parte estatística, enfim, então esse é o objetivo dele do curso, da gente parar de ser vendido nas histórias, assim, saber realmente argumentar e falar e não ficar lambda e r quadrado, a gente fica hã?
+Maravilhosa. Eu adorei que ela usou os dois termos que vocês vão inventar, o lambda e o r quadrado, ou seja, vão ter que aprender mesmo porque vocês vão ter que criar essa porra toda. Maravilhosa, Ca, muito obrigada pela sua apresentação. George, você quer contribuir com algo? Você quer acrescentar?
+Toma perfeito. Nota 10.
+Maravilhoso, também gostei muito.
+Muito bom.
+Então, George, aproveita então, apresenta a cá pra gente.
+Bom, a Cam- a Camila é gaúcha, mora em Canoas, mas isso ela já contou. Ela tem duas filhas pequenas, Alice e Sofia. Se eu não me engano, uma delas tem 3, a outra tem 1 ou alguma coisa... São pequenas as duas. E ela é cientista de da- trabalha como cientista de dados no Boticário, já trabalhou na XP. É... ela é formada em economia e ela migrou pra data science há alguns anos, e ela acredita que ela tem esse diferencial de entender de negócio, de economia, e ela, é por isso que ela tá fazendo esse curso, pra ela poder, é, ir além. E ela, o objetivo dela é transformar análise de dados em decisões de negócio que tragam dinheiro para as empresas. É...
+Vocês se identificaram, né?
+Super. Dep- ah, que mais que ela falou? Depois que ela se tornou mãe, ela parou de viajar, mas ela adorava ir passear no Canadá e nos Estados Unidos. Eu tô aumentando um pouco, tá, Camila? É... E a coisa mais legal que ela falou é que ela recusou um processo seletivo pra ganhar 220 mil dólares por ano, porque ela achava que não tinha fluência em inglês. Então o happy hour lá de Porto Alegre vai ser em inglês, tá combinado.
+É isso. E as aulas que a gente vai fazer extra aí, foi sugestão do outro grupo, mas ó lá lá, tá encaixando em vários.
+E vai ter que ser em inglês e francês também, pra gente pegar aquela vaguinha no Quebec que alguém aí falou que tinha, né?
+Ah, o Júnior falou pra mim, né?
+Eu tô querendo, tô interessado. E o medo que ela falou é que, é que ela, é ela, não é medo, mas é a apreensão que ela tem é se essa jornada múltipla vai, se ela vai dar conta, né? Tem o trabalho no Boticário, 44 horas de jornada, dois filhos pequenos, o curso, o marido, a família, eh, os happy hour, não sei, ela não sabe se vai dar conta disso.
+E a gente tá aqui pra apoiar, Caio, a gente vai te ajudar a chegar lá, e aí estamos em 35, 6 pessoas aqui pra te suportar, então conte conosco.
+Obrigada, Adri. É como eu falo, não vamos ter pena de mãe, né? Vamos ter empatia pelas mães. E só complementando, eu tenho duas bebês, uma tem 1 ano e outra tem 2 anos.
+Perfeita. Muito bom. Bem-vinda, Ca. Foi a última que fez a matrícula, gente. No no último minuto ali, ela entrou pro curso. Então, sucesso aqui pra gente. E aí, galera, curtiram as pessoas com quem vocês conviverão pelos próximos dois longos anos da nossa jornada? E aí, gente, hoje vai ser o dia que eu vou terminar 10 e 15, tudo bem? Vocês não me matam ficar 10 minutinhos a mais? O que que eu quero fechar aqui o nosso racional? Vocês lembram das imagens, não é mesmo? Então, eu quero fechar falando sobre isso. Quando eu entrei num grupo, eu vi uma pessoa falando: ah, a gente viu uma mulher grávida. Quando eu entrei no outro, ah, a gente viu uma seta, a gente viu um um sapato de bailarina. E aí eu vi cada coisa que eu falei: meu Deus, que droga é essa que esse pessoal tá usando? Mas a criatividade aqui já vi que ela é grande, não é mesmo? E aí, vamos lá. Eram 5 imagens que existiam. A primeira delas, quem pegou essa imagem aqui, ó? Que que vocês veem aqui, gente?
+Um quadrado.
+Parede de um quadrado.
+Parede.
+Uma tomada.
+Uma parede de um quadrado.
+É.
+Todo mundo tá, e uma tomada lá embaixo, certo? E não tem muita visão, né? A gente não sabe onde é esse quadrado tá, a gente não sabe bem o o o que que isso quer dizer, mas é uma visão. E aí teve outra imagem, e nessa outra imagem aqui, onde viram uma pessoa grávida, onde viram uma seta, onde viram o efeito do
+Uma vela.
+PPT. Uma vela.
+Uma vela de barro.
+E aqui de novo é um rabisco que a gente não sabe bem o que é, num fundo que nem a tomada tem mais. Essa outra aqui, que que a galera viu?
+Capacete de lado com dois xuxinhos, ou então a menina, né, um roxo a menina de lado com um quadro de fundo numa parede.
+Muita brisa, né não? Alguém viu outra coisa aqui, se não for uma pessoa de lado com um capacete, não sei o que lá?
+A gente viu um quadro e uma seta pra direita, assim, foi bem...
+Um quadro atrás e uma seta pra direita.
+Eu tinha visto uma pessoa barriguda, assim, jogando a barriga pra pra... pra frente.
+Ô Thanos, essa aí que é a bandeirinha de...
+Meu Deus, agora que você falou, parece muito uma pessoa jogando a barriga pra frente.
+Essa aí que é a bandeirinha da da festa junina, ô Thanos?
+Era esse, Tano?
+É a segunda.
+É a segunda, essa aqui. Ah, é verdade, parece uma bandeira do Festa Junina de lá.
+Meteu a bandeirinha do Festa Junina.
+E essa outra imagem aqui?
+Parece uma coroa na janela desenhada. Rabisco de criança.
+Verdade, parece uma coroa na janela.
+O Rafael
+E atrás tinha os quadros, né?
+Falou uma coisa mais ligada à estatística aí, cara. Fala aí, Rafael.
+Não, foi na, foi na imagem anterior, que eram
+Foi na anterior.
+É 4 distribuições normais ligadas pelas pontas.
+Nossa.
+Rapaz do céu! É verdade, mano.
+A brisa cruel.
+Esse último aí.
+Os 7 baseados, mas olha como é verdade. Caralho, Rafael, genial, gente, eu tenho uma normal tatuada no braço. O próximo eu tatuo essa daí, que são 4 amigas, né? Maravilhoso. Dói, não tinha visto, mas faz sentido. E a última imagem que vocês viram foi um círculo, não foi? E aí, vários grupos eu passei e falaram assim, ah, parecia uma exposição de arte. Vocês concordam que parece realmente, em algumas imagens, uma exposição de arte. Por que que eu coloquei isso aqui, gente? Eu fiquei boas horas no Google procurando um negócio que mostrasse isso. Porque vocês viram a mesma coisa. O grande problema é que foram fotos tiradas em visões diferentes. É o mesma coisa que vocês olharam. O ponto é que eu tirei fotos em momentos diferentes. E o que que isso tem a ver, Adriana, com a gente? Ciência de dados é isso, gente. A gente tá olhando a mesma coisa, mas dependendo do ponto de vista que você olha, você conta uma história distinta do outro. E isso daqui eu quero que vocês entendam de duas formas, que vai ser uma coisa que a gente vai percorrer durante todo o nosso curso. Começa com, o primeira visão é, não existe uma solução única pra um problema relacionado a dados. Então, é muito comum a gente ter uma ideia, criar uma estratégia, pô, eu quero resolver pensando nesse formato e ter uma outra pessoa que vai chegar talvez no mesmo lugar, mas por um caminho diferente. Cérebros distintos pensam de formas diferentes. É a mesma coisa, fazendo uma analogia a isso, depende como você olha o problema, você pode percorrer um caminho distinto para chegar numa solução. As duas podem ser válidas. E aí, o que eu vou sempre defender com vocês é, qual é o seu ponto de vista e se mantenha no palco. Lembram da de quando a gente falou na aula passada? Se você subiu no palco e você tem uma ideia, se mantenha lá. Ou seja, se alguém te fizer uma pergunta, tenha argumentos, tenha resposta, porque você pode estar no palco nessa visão, você pode estar no palco nessa outra visão, mas todas estão lá no palco e estão corretas. Então, isso é uma forma da gente olhar. E outra forma que eu quero cutucar de vocês refletirem pra gente seguir na nossa jornada semana que vem, é o fato de que, na estatística, é muito perigoso a gente olhar por um ângulo só, porque uma mesma coisa pode ter formatos diferentes. O que isso quer dizer, falando em estatística mesmo, números? Não basta uma medida, não basta um único olhar. A gente tem que fazer o quê? A gente tem que pegar várias medidas, a gente tem que tentar dar os 360, e isso envolve a gente conhecer técnicas para que a gente seja capaz de fazer isso. Então, qual era a mensagem principal aqui? Cada um de vocês viu uma coisa, mas era a mesma coisa. O problema era a forma como você enxergou aquilo. Isso quer dizer o quê? Quando a gente fala de dados, é a mesma merda, só que vai depender da forma como você vai extrair resultados daquilo. E agora, o que eu quero mostrar e o porquê eu investi duas aulas aqui com vocês, em vocês se conectarem, é o quê? Se isso é uma verdade, eu acredito que vocês vão concordar muito com a minha fala ao longo do curso. Vocês concordam que ter amigos que têm o mesmo conhecimento que eu me permite olhar a mesma coisa de um ângulo que eu não pensei naquele momento? Então, é por isso que eu defendo com unhas e dentes o quão importante é nós termos networking na nossa área, e não é só na nossa área, isso se aplica em qualquer lugar. Mas principalmente, não é networking de ah, é é só uma pessoa que eu conheci e tal. Não, eu quero que vocês se tornem amigos. E isso daqui defende o meu argumento. Por quê? Porque a Adriana tem um cérebro e ela vê uma bola. Mas, quando o Júnior olha, ele vê um quadrado. Mas, quando o o Cury olha, ele vê 4 normais conectadas. Mas, quando o o Rafa que vê 4 normais, mas quando o Cury olha, ele vê lá, sei lá, um um sei lá que porra que ele vê. Mas cada um vê uma coisa, e isso é o que faz a gente ter brilhantismo na nossa área. Porque o que vai te tornar diferente é você pensar fora da caixa e usar sua criatividade. E pra gente ser capaz de usar a nossa criatividade, a gente precisa conhecer das ferramentas. E o curso aqui, ele tem muito a missão de te fornecer as ferramentas pra que vocês, e sendo treinados e se- e vivenciando problemas e histórias diferentes, comecem a juntar o jogo e criar estratégias, que eu uso muito esse termo, não é um termo que todo mundo usa, mas usar estratégias analíticas pra que você seja criativo e solucione problemas. A gente só é pago pra solucionar problemas. Fez sentido isso pra vocês? Agora,
+Diais.
+O vídeo fez sentido aí? Porque o Arthur, gente, ele olhou uma foto e descobriu que porra era tudo. Ele falou, mas eu já conheço esse vídeo e não sei o que lá. Eu falei, meu Deus, deixa eu fazer o link, você viu um pedaço de uma foto e sabe o que é. Mas é isso, Arthur, fez sentido? Bora. Júnior, por favor.
+Dri, quando você fala que a gente tem várias perspectivas de uma situação e tudo mais, você quer dizer caminho pra chegar, caminhos pra chegar na solução ou vários caminhos e várias soluções diferentes?
+Os dois são válidos. A gente tem vários caminhos e soluções diferentes também. E dentro de um mesmo caminho, aí só o ponto que eu coloco meio que chamando a atenção é, em estatística não se contentem em olhar só por um lado. Ah, eu vou fazer a média e tô feliz com isso. Não. Você vai precisar ter uma visão maior pra você enxergar melhor aquela situação, mas saiba que ainda tem outras formas de você tentar olhar conforme for a criatividade de quem tiver com o olho na mira. Então, isso é importante a gente ter muito em mente. Por quê? Porque ninguém é Deus, mano. Quantas vezes eu resolvi um problema usando uma família de técnicas, vem alguém e fala, ah, eu enxerguei desse outro jeito e usei essa outra família. E não tá errado, nem eu, nem ele. Então é uma outra forma, uma outra perspectiva. E é isso que eu quero que vocês comecem a treinar, porque se a gente só olha sempre do mesmo jeito, se a gente só tem aquela ferramenta, se a gente tá ali, você começa a perder poder de mercado, que é uma preocupação de um monte de gente. Então a gente começa a o quê? Perder possibilidades de criar coisas novas. E a tecnologia, ela só cresce porque tem cérebros que veem as coisas de jeitos diferentes. Beleza? Todo mundo bem? Fez sentido isso pra vocês? Pediram o link, já mandaram aqui, vocês querem que mande no grupo? Eu tenho esse vídeo editado, eu posso... Ah, não posso mais não, que o meu celular deu pau e eu deletei tudo que eu tinha. Então não tenho mais um celular, mas se precisarem, eu subo de novo. Curtiram? Então, gente, semana que vem agora a gente começa a lapada, tá bem? Terça-feira vocês terão aula com o professor Vitor. Eu vou vir, ó, isso foi uma pergunta que me fizeram. Ah, você vai estar em todas as aulas? Não, eu não estarei em todas as aulas, então Mabe e Lê tá aqui pra me re- estarão aqui pra me representar, mas vocês têm meu WhatsApp, vocês podem me procurar. Eu estarei sempre nas primeiras aulas dos professores, em algumas aleatórias que me dá vontade de vir, até pra eu estudar, pra eu aprender e pra eu poder compartilhar alguma coisa com vocês. Terça-feira estarei no começo da aula com vocês pra apresentar o Vitor pra vocês e passar o comando pra ele. O Vitor, ele vem com a ideia, então, de falar um pouco sobre o que é um computador pra vocês. Quinta-feira, eu começo uma discussão sobre os nossos temas, sobre entender o que é ciência de dados numa visão mais geral. A gente vai fazer várias discussões interessantes, muitas das coisas que eu comentar de forma lúdica, depois o Vitor vai complementar de forma teórica, e aí eu sigo com os princípios de estatística e o Vitor com a parte de computação e depois computação em nuvem. Tá bem? Então, nesse início de curso, não t- não seremos contínuos. Terça-feira, Vitor com computação e quinta-feira eu com estatística. Beleza? Minhas aulas, é importantíssimo que vocês venham com papel e caneta e não é uma regra, mas eu sugiro muito que vocês anotem, porque na hora que você escreve, o seu cérebro absorve mais. Beleza? Toda semana teremos atividades, algumas múltipla escolhas, outras tarefas para vocês desenvolverem e entregarem. Alguém tem algum ponto? Pode falar?
+Não, falei beleza.
+Maravilha. Alguém quer complementar alguma coisa?
+Eh, para as aulas com o professor Vitor, precisamos ter algum software no computador ou?
+Ótima pergunta. Nesse momento, não. Vocês vão precisar, mas na verdade não vai ser software, vocês vão fazer tudo online e vai ser subir máquina na nuvem e tal. Quando vocês vão precisar, vai ser com a parte do SQL, do R, do Python, mas aí a gente sempre avisa antes e dá um manual de como vocês fazem a a a instalar a parada aí no computador. Beleza? Alguém mais? Algum outro ponto? Então demorou, galera, sejam todos muito bem-vindos, espero que vocês tenham gostado, se divertido aí em conhecer uns aos outros. Eu vou mandar lá no grupo do WhatsApp agora o... as duplas, e aí no número 1 você vai lá, coloca teu nome, se você já tiver sua dupla, coloca o seu nome e o nome da dupla. Se você ainda não tem dupla e tá na roda, coloca o seu nome e, e aí outra pessoa vai lá e se preenche. Todo mundo entendeu? Beleza? Então, eu quero saber dessas duplas até sexta-feira, fechou? Até amanhã. Então, se agilizem entre hoje e amanhã pra criarem suas duplinhas, que vai durar um mês. Boa noite, gente. Beijos e desculpem o atraso de hoje, mas combinei, né, que até umas 10 e 15, 20 era o máximo.
+Em paz.
+Valeu, pessoal. Boa noite.
+Boa noite, pessoal.
+Boa noite.
+Boa noite.
+Tchau, tchau.
+Boa semana.
+Tchau, boa noite.
+Fala, pessoal.

@@ -10,3 +10,19 @@ services:
     volumes:
       - ./agent:/app/agent
       - ./frontend:/app/frontend
+    depends_on:
+      - qdrant
+
+  # Banco vetorial usado pelo RAG (módulo 6a). Exposto também na máquina host
+  # (localhost:6333) para que o agente rodando fora do container (via
+  # scripts/start-agent.ps1) consiga consultá-lo durante o desenvolvimento.
+  qdrant:
+    image: qdrant/qdrant:latest
+    ports:
+      - "6333:6333" # API HTTP/REST
+      - "6334:6334" # API gRPC
+    volumes:
+      - qdrant_data:/qdrant/storage
+
+volumes:
+  qdrant_data:
