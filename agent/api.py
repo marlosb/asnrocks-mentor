@@ -11,8 +11,10 @@ A partir do módulo 4, a sessão também carrega as skills de `.github/skills/`.
 A partir do módulo 5, a sessão também tem as tools `buscar_na_web` e
 `ler_pagina_web` (`agent/tools/web.py`). A partir do módulo 6a, a sessão
 também tem a tool `search_docs` (`agent/tools/rag.py`), que busca no acervo de
-aulas indexado no Qdrant. Nenhuma outra tool embutida (bash, etc.) é liberada:
-cada módulo futuro habilita explicitamente só o que precisa, em
+aulas indexado no Qdrant. A partir do módulo 6c, a sessão também tem a tool
+`run_python` (`agent/tools/sandbox.py`), que executa código em um container
+isolado via `docker exec`. Nenhuma outra tool embutida (bash, etc.) é
+liberada: cada módulo futuro habilita explicitamente só o que precisa, em
 `available_tools`.
 """
 
@@ -35,6 +37,7 @@ from pydantic import BaseModel
 
 from agent.config import settings
 from agent.tools.rag import criar_tools as criar_tools_rag
+from agent.tools.sandbox import criar_tools as criar_tools_sandbox
 from agent.tools.web import criar_tools as criar_tools_web
 
 logger = logging.getLogger(__name__)
@@ -95,6 +98,20 @@ def _transmitir_para_assinantes(event: object) -> None:
         fila.put_nowait(payload)
 
 
+def _publicar_imagens_sandbox(imagens: list[str]) -> None:
+    """Envia gráficos gerados pelo `run_python` aos clientes SSE.
+
+    O SDK não ecoa o conteúdo binário dos resultados de tool pelos eventos da
+    sessão (ele é entregue só ao modelo, para compor a resposta) — por isso a
+    tool de sandbox publica as imagens diretamente aqui, como um evento
+    próprio (`tipo: "run_python.imagens"`), fora do fluxo normal de eventos
+    do SDK.
+    """
+    payload = {"tipo": "run_python.imagens", "dados": {"imagens": imagens}}
+    for fila in list(estado.assinantes):
+        fila.put_nowait(payload)
+
+
 async def _criar_sessao(client: CopilotClient, modelo: str) -> CopilotSession:
     """Abre uma sessão para o modelo indicado, já com a persona do Mentor."""
     session = await client.create_session(
@@ -110,7 +127,11 @@ async def _criar_sessao(client: CopilotClient, modelo: str) -> CopilotSession:
         system_message={"mode": "append", "content": _carregar_prompt_sistema()},
         enable_skills=True,
         skill_directories=[str(SKILLS_DIR)],
-        tools=[*criar_tools_web(), *criar_tools_rag()],
+        tools=[
+            *criar_tools_web(),
+            *criar_tools_rag(),
+            *criar_tools_sandbox(publicar_imagens=_publicar_imagens_sandbox),
+        ],
         # Nenhuma tool embutida além da skill (bash, etc.) fica disponível ainda;
         # os módulos seguintes liberam o resto explicitamente, uma de cada vez.
         available_tools=(
@@ -119,6 +140,7 @@ async def _criar_sessao(client: CopilotClient, modelo: str) -> CopilotSession:
             .add_custom("buscar_na_web")
             .add_custom("ler_pagina_web")
             .add_custom("search_docs")
+            .add_custom("run_python")
         ),
     )
     session.on(_transmitir_para_assinantes)

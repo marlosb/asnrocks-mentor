@@ -40,6 +40,13 @@ class Settings(BaseSettings):
     # "http://qdrant:6333" (nome do serviço vira hostname na rede interna).
     qdrant_url: str = "http://localhost:6333"
 
+    # Sandbox de execução de código Python (módulo 6c). O container roda com
+    # network_mode: none (sem rede); a tool run_python invoca código nele via
+    # `docker exec <nome>`, por isso o nome precisa ser estável
+    # (container_name no docker-compose.yml), não o nome gerado pelo compose.
+    sandbox_container_name: str = "mentor-sandbox"
+    sandbox_timeout_segundos: int = 20
+
     # Diretório de dados do runtime do Copilot SDK (sessões, config, etc.).
     # Isolado do perfil pessoal do desenvolvedor (~/.copilot) para que o agente do
     # workshop não herde MCP servers, extensões ou credenciais de outros projetos.

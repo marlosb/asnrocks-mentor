@@ -48,6 +48,7 @@ mentor-workshop/
 │   ├── instructions/            # instruções por caminho (*.instructions.md)
 │   ├── skills/                  # skills do Mentor (SKILL.md)
 │   │   ├── explicar-conceito/
+│   │   ├── criar-graficos-matplotlib/
 │   │   └── revisar-codigo-aluno/
 │   └── workflows/eval.yml       # avaliação a cada pull request
 ├── agent/

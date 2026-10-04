@@ -34,10 +34,10 @@ Get-Content $SecretsFile | ForEach-Object {
 
 Push-Location $raizProjeto
 try {
-    Write-Host "Subindo o Qdrant (banco vetorial do RAG) via docker compose..."
-    docker compose up -d qdrant
+    Write-Host "Subindo o Qdrant e o sandbox de execução Python via docker compose..."
+    docker compose up -d qdrant sandbox
     if ($LASTEXITCODE -ne 0) {
-        Write-Error "Falha ao subir o Qdrant. Verifique se o Docker Desktop está em execução."
+        Write-Error "Falha ao subir Qdrant/sandbox. Verifique se o Docker Desktop está em execução."
         exit 1
     }
 
@@ -56,7 +56,7 @@ try {
     & uv @args
 }
 finally {
-    Write-Host "Encerrando o Qdrant..."
-    docker compose stop qdrant
+    Write-Host "Encerrando o Qdrant e o sandbox..."
+    docker compose stop qdrant sandbox
     Pop-Location
 }

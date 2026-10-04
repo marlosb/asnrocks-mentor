@@ -14,6 +14,14 @@ let bolhaResposta = null;
 let textoRespostaAtual = "";
 /** Contagem de chamadas a skills/tools no turno atual, por nome. */
 let contadorFerramentas = {};
+/**
+ * Imagens (data URLs) geradas por tools no turno atual, na ordem em que os
+ * resultados chegaram. O modelo referencia cada uma no texto como
+ * `![legenda](attachment://algum-nome.png)`; como esses nomes são inventados
+ * pelo modelo e não correspondem a nenhum identificador real do SDK, a
+ * associação é feita pela ordem de aparição no texto, não pelo nome do arquivo.
+ */
+let imagensRespostaAtual = [];
 
 /** Rótulos amigáveis para as skills/tools mais comuns; nomes desconhecidos usam o bruto. */
 const ROTULOS_FERRAMENTAS = {
@@ -57,6 +65,7 @@ function renderizarResumoFerramentas(container, contador) {
 const PADRAO_INLINE = /`([^`]+)`|\*\*([^*]+)\*\*|__([^_]+)__|\*([^*]+)\*|_([^_]+)_/g;
 const PADRAO_ITEM_LISTA = /^\s*([-*]|\d+\.)\s+/;
 const PADRAO_CABECALHO = /^(#{1,6})\s+(.*)/;
+const PADRAO_IMAGEM = /^!\[([^\]]*)\]\(([^)]+)\)$/;
 
 /**
  * Renderiza negrito/itálico/código inline dentro de um elemento, criando nós
@@ -109,11 +118,34 @@ function renderizarParagrafo(container, texto) {
 function renderizarMarkdown(container, texto) {
   container.textContent = "";
   const linhas = texto.split("\n");
+  // Conta quantas referências de imagem já foram encontradas nesta renderização,
+  // para associá-las em ordem às imagens recebidas via tool.execution_complete.
+  let indiceImagem = 0;
   let i = 0;
   while (i < linhas.length) {
     const linha = linhas[i];
 
     if (linha.trim() === "") {
+      i++;
+      continue;
+    }
+
+    const imagem = linha.trim().match(PADRAO_IMAGEM);
+    if (imagem) {
+      const dataUrl = imagensRespostaAtual[indiceImagem];
+      indiceImagem++;
+      if (dataUrl) {
+        const img = document.createElement("img");
+        img.className = "imagem-gerada";
+        img.src = dataUrl;
+        img.alt = imagem[1];
+        container.appendChild(img);
+      } else {
+        // Imagem ainda não recebida ou referência sem correspondência: mostra a legenda.
+        const legenda = document.createElement("p");
+        legenda.textContent = imagem[1] || "[imagem]";
+        container.appendChild(legenda);
+      }
       i++;
       continue;
     }
@@ -189,6 +221,7 @@ function tratarEvento(evento) {
         bolhaResposta = criarBolha("agente");
         textoRespostaAtual = "";
         contadorFerramentas = {};
+        imagensRespostaAtual = [];
       }
       textoRespostaAtual += evento.dados?.deltaContent ?? "";
       renderizarMarkdown(bolhaResposta, textoRespostaAtual);
@@ -199,6 +232,7 @@ function tratarEvento(evento) {
       if (!bolhaResposta) {
         bolhaResposta = criarBolha("agente");
         contadorFerramentas = {};
+        imagensRespostaAtual = [];
       }
       textoRespostaAtual = evento.dados?.content ?? "";
       renderizarMarkdown(bolhaResposta, textoRespostaAtual);
@@ -215,6 +249,13 @@ function tratarEvento(evento) {
       }
       break;
     }
+    case "run_python.imagens": {
+      const imagens = evento.dados?.imagens ?? [];
+      for (const imagemBase64 of imagens) {
+        imagensRespostaAtual.push(`data:image/png;base64,${imagemBase64}`);
+      }
+      break;
+    }
     case "session.idle": {
       if (bolhaResposta) {
         renderizarResumoFerramentas(bolhaResposta, contadorFerramentas);
@@ -223,6 +264,7 @@ function tratarEvento(evento) {
       bolhaResposta = null;
       textoRespostaAtual = "";
       contadorFerramentas = {};
+      imagensRespostaAtual = [];
       break;
     }
     case "session.error": {

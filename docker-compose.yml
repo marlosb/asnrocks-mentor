@@ -12,6 +12,7 @@ services:
       - ./frontend:/app/frontend
     depends_on:
       - qdrant
+      - sandbox
 
   # Banco vetorial usado pelo RAG (módulo 6a). Exposto também na máquina host
   # (localhost:6333) para que o agente rodando fora do container (via
@@ -23,6 +24,25 @@ services:
       - "6334:6334" # API gRPC
     volumes:
       - qdrant_data:/qdrant/storage
+
+  # Sandbox de execução de código Python (módulo 6c). Sem rede, sistema de
+  # arquivos somente leitura (exceto /tmp), sem capabilities e com limites de
+  # CPU/memória. A tool run_python (agent/tools/sandbox.py) executa código
+  # aqui via `docker exec`, nunca por rede — por isso nenhuma porta é exposta.
+  sandbox:
+    build:
+      context: ./sandbox
+    container_name: mentor-sandbox
+    network_mode: none
+    read_only: true
+    tmpfs:
+      - /tmp
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+    mem_limit: 512m
+    cpus: 1.0
 
 volumes:
   qdrant_data:

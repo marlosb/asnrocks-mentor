@@ -146,6 +146,14 @@ main {
   padding: 0;
 }
 
+.bolha--agente img.imagem-gerada {
+  display: block;
+  max-width: 100%;
+  margin: 0.4rem 0;
+  border-radius: 0.5rem;
+  background: #fff;
+}
+
 .resumo-ferramentas {
   margin: 0.6rem 0 0;
   padding: 0.5rem 0 0 1.2rem;
