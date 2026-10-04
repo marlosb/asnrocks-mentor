@@ -26,6 +26,11 @@ body {
 header {
   padding: 1rem 1.5rem;
   border-bottom: 1px solid #1f3348;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.5rem;
 }
 
 header h1 {
@@ -37,6 +42,22 @@ header p {
   margin: 0.25rem 0 0;
   color: var(--cor-texto-fraco);
   font-size: 0.9rem;
+}
+
+.modelo-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--cor-texto-fraco);
+}
+
+.modelo-label select {
+  padding: 0.3rem 0.5rem;
+  border-radius: 0.4rem;
+  border: 1px solid #1f3348;
+  background: var(--cor-painel);
+  color: var(--cor-texto);
 }
 
 main {

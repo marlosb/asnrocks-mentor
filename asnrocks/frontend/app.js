@@ -6,6 +6,7 @@
 const chatForm = document.getElementById("chat-form");
 const campoMensagem = document.getElementById("mensagem");
 const listaMensagens = document.getElementById("mensagens");
+const seletorModelo = document.getElementById("modelo-select");
 
 /** Bolha do agente em construção durante o streaming da resposta atual. */
 let bolhaResposta = null;
@@ -188,6 +189,47 @@ function conectarEventos() {
   };
 }
 
+/** Busca os modelos configurados no backend e preenche o seletor. */
+async function carregarModelos() {
+  const resposta = await fetch("/modelos");
+  if (!resposta.ok) return;
+  const { modelos, atual } = await resposta.json();
+
+  seletorModelo.textContent = "";
+  for (const modelo of modelos) {
+    const opcao = document.createElement("option");
+    opcao.value = modelo;
+    opcao.textContent = modelo;
+    opcao.selected = modelo === atual;
+    seletorModelo.appendChild(opcao);
+  }
+  seletorModelo.disabled = modelos.length <= 1;
+}
+
+/** Encerra a sessão atual e inicia uma nova com o modelo escolhido. */
+async function trocarModelo(modelo) {
+  seletorModelo.disabled = true;
+  const resposta = await fetch("/modelo", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ modelo }),
+  });
+  const corpo = await resposta.json();
+
+  const aviso = criarBolha("sistema");
+  aviso.textContent = resposta.ok
+    ? `Modelo trocado para ${corpo.modelo}. Uma nova conversa foi iniciada com esse modelo.`
+    : `Não foi possível trocar de modelo: ${corpo.erro ?? "falha desconhecida"}`;
+
+  bolhaResposta = null;
+  textoRespostaAtual = "";
+  seletorModelo.disabled = false;
+}
+
+seletorModelo.addEventListener("change", () => {
+  trocarModelo(seletorModelo.value);
+});
+
 async function enviarMensagem(texto) {
   const bolha = criarBolha("aluno");
   bolha.textContent = texto;
@@ -213,3 +255,4 @@ chatForm.addEventListener("submit", (evento) => {
 });
 
 conectarEventos();
+carregarModelos();
