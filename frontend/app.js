@@ -12,6 +12,47 @@ const seletorModelo = document.getElementById("modelo-select");
 let bolhaResposta = null;
 /** Texto markdown acumulado da resposta em construção (os deltas chegam em partes). */
 let textoRespostaAtual = "";
+/** Contagem de chamadas a skills/tools no turno atual, por nome. */
+let contadorFerramentas = {};
+
+/** Rótulos amigáveis para as skills/tools mais comuns; nomes desconhecidos usam o bruto. */
+const ROTULOS_FERRAMENTAS = {
+  skill: "Skill",
+  web_search: "Busca na web",
+  web_fetch: "Leitura de página",
+  bash: "Bash",
+  run_python: "Execução de código",
+  search_docs: "Busca no acervo",
+};
+
+/** Converte um nome de tool desconhecido em um rótulo legível. */
+function rotuloFerramenta(nome) {
+  if (ROTULOS_FERRAMENTAS[nome]) return ROTULOS_FERRAMENTAS[nome];
+  const texto = nome.replace(/[_-]+/g, " ");
+  return texto.charAt(0).toUpperCase() + texto.slice(1);
+}
+
+/** Registra uma chamada de skill/tool no contador do turno atual. */
+function registrarUsoFerramenta(nome) {
+  contadorFerramentas[nome] = (contadorFerramentas[nome] ?? 0) + 1;
+}
+
+/** Acrescenta à bolha o resumo de skills/tools usadas no turno, se houver algum uso. */
+function renderizarResumoFerramentas(container, contador) {
+  const nomes = Object.keys(contador);
+  if (nomes.length === 0) return;
+
+  const lista = document.createElement("ul");
+  lista.className = "resumo-ferramentas";
+  for (const nome of nomes) {
+    const quantidade = contador[nome];
+    const item = document.createElement("li");
+    const sufixo = quantidade === 1 ? "chamada" : "chamadas";
+    item.textContent = `${rotuloFerramenta(nome)}: ${quantidade} ${sufixo}`;
+    lista.appendChild(item);
+  }
+  container.appendChild(lista);
+}
 
 const PADRAO_INLINE = /`([^`]+)`|\*\*([^*]+)\*\*|__([^_]+)__|\*([^*]+)\*|_([^_]+)_/g;
 const PADRAO_ITEM_LISTA = /^\s*([-*]|\d+\.)\s+/;
@@ -147,6 +188,7 @@ function tratarEvento(evento) {
       if (!bolhaResposta) {
         bolhaResposta = criarBolha("agente");
         textoRespostaAtual = "";
+        contadorFerramentas = {};
       }
       textoRespostaAtual += evento.dados?.deltaContent ?? "";
       renderizarMarkdown(bolhaResposta, textoRespostaAtual);
@@ -156,14 +198,31 @@ function tratarEvento(evento) {
     case "assistant.message": {
       if (!bolhaResposta) {
         bolhaResposta = criarBolha("agente");
+        contadorFerramentas = {};
       }
       textoRespostaAtual = evento.dados?.content ?? "";
       renderizarMarkdown(bolhaResposta, textoRespostaAtual);
       break;
     }
+    case "skill.invoked": {
+      registrarUsoFerramenta("skill");
+      break;
+    }
+    case "tool.execution_start": {
+      const nomeFerramenta = evento.dados?.toolName;
+      if (nomeFerramenta && nomeFerramenta !== "skill") {
+        registrarUsoFerramenta(nomeFerramenta);
+      }
+      break;
+    }
     case "session.idle": {
+      if (bolhaResposta) {
+        renderizarResumoFerramentas(bolhaResposta, contadorFerramentas);
+        listaMensagens.scrollTop = listaMensagens.scrollHeight;
+      }
       bolhaResposta = null;
       textoRespostaAtual = "";
+      contadorFerramentas = {};
       break;
     }
     case "session.error": {

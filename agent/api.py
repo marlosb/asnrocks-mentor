@@ -7,6 +7,9 @@ eventos de uso de tools) para o painel do frontend.
 A partir do módulo 2, a sessão carrega a persona do Mentor a partir de
 `agent/prompts/mentor.system.md`. Quando um segundo modelo está configurado
 (`FOUNDRY_MODEL_2`), o frontend mostra um seletor para trocar o modelo ativo.
+A partir do módulo 4, a sessão também carrega as skills de `.github/skills/`.
+Nenhuma outra tool embutida (busca na web, bash, etc.) é liberada: cada módulo
+futuro habilita explicitamente só o que precisa, em `available_tools`.
 """
 
 from __future__ import annotations
@@ -19,7 +22,7 @@ from contextlib import asynccontextmanager
 from enum import Enum
 from pathlib import Path
 
-from copilot import CopilotClient
+from copilot import CopilotClient, ToolSet
 from copilot.session import CopilotSession, PermissionHandler
 from fastapi import FastAPI, Request
 from fastapi.responses import StreamingResponse
@@ -32,6 +35,7 @@ logger = logging.getLogger(__name__)
 
 PROMPT_SISTEMA_PATH = Path(__file__).parent / "prompts" / "mentor.system.md"
 FRONTEND_DIR = Path(__file__).parent.parent / "frontend"
+SKILLS_DIR = Path(__file__).parent.parent / ".github" / "skills"
 
 
 class EstadoAgente:
@@ -98,6 +102,12 @@ async def _criar_sessao(client: CopilotClient, modelo: str) -> CopilotSession:
         },
         streaming=True,
         system_message={"mode": "append", "content": _carregar_prompt_sistema()},
+        enable_skills=True,
+        skill_directories=[str(SKILLS_DIR)],
+        # Nenhuma tool embutida (busca na web, bash, etc.) fica disponível ainda;
+        # só a skill já ensinada no módulo 4. Módulos seguintes liberam o resto
+        # explicitamente, uma de cada vez.
+        available_tools=ToolSet().add_builtin("skill"),
     )
     session.on(_transmitir_para_assinantes)
     return session
