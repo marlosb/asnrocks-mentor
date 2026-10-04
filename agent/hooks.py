@@ -1,4 +1,4 @@
-"""Hooks de segurança da sessão.
+"""Hooks da sessão: bloqueio de tools e injeção automática de memória.
 
 Centraliza regras de bloqueio (`on_pre_tool_use`) aplicadas antes de qualquer
 chamada de tool. A partir do módulo 6d, a única regra existente é a allowlist
@@ -6,6 +6,13 @@ de domínios para a navegação via Playwright MCP (`agent/config.py`): o
 Playwright MCP e suas próprias flags `--allowed-origins`/`--blocked-origins`
 não são consideradas uma fronteira de segurança pela documentação oficial do
 servidor, por isso o bloqueio é feito aqui, do lado do agente.
+
+A partir do módulo 7, `on_user_prompt_submitted` injeta automaticamente, a
+cada mensagem do aluno, as memórias mais relevantes (`agent/tools/memoria.py`)
+como contexto adicional. A sessão é criada uma única vez, na inicialização da
+API (antes de existir qualquer mensagem) — por isso a injeção acontece aqui,
+a cada mensagem, em vez de em `on_session_start` (cujo `initialPrompt` nunca
+estaria populado neste fluxo).
 
 Novas regras de bloqueio entram neste módulo, com teste em
 `tests/test_hooks.py`.
@@ -16,9 +23,15 @@ from __future__ import annotations
 import logging
 from urllib.parse import urlparse
 
-from copilot.session import PreToolUseHookInput, PreToolUseHookOutput
+from copilot.session import (
+    PreToolUseHookInput,
+    PreToolUseHookOutput,
+    UserPromptSubmittedHookInput,
+    UserPromptSubmittedHookOutput,
+)
 
 from agent.config import settings
+from agent.tools.memoria import buscar_memorias_relevantes
 
 logger = logging.getLogger(__name__)
 
@@ -65,4 +78,21 @@ async def on_pre_tool_use(
     }
 
 
-__all__ = ["on_pre_tool_use"]
+async def on_user_prompt_submitted(
+    hook_input: UserPromptSubmittedHookInput, _invocation: dict[str, str]
+) -> UserPromptSubmittedHookOutput | None:
+    """Injeta memórias relevantes sobre o aluno como contexto a cada mensagem enviada."""
+    prompt = hook_input.get("prompt", "").strip()
+    if not prompt:
+        return None
+
+    memorias = await buscar_memorias_relevantes(prompt)
+    if not memorias:
+        return None
+
+    linhas = ["Memórias sobre o aluno (gravadas em conversas anteriores):"]
+    linhas.extend(f"- [{memoria['tipo']}] {memoria['fato']}" for memoria in memorias)
+    return {"additionalContext": "\n".join(linhas)}
+
+
+__all__ = ["on_pre_tool_use", "on_user_prompt_submitted"]

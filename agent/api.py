@@ -16,7 +16,11 @@ aulas indexado no Qdrant. A partir do módulo 6c, a sessão também tem a tool
 isolado via `docker exec`. A partir do módulo 6d, a sessão também se conecta
 ao servidor MCP do Playwright (`agent/config.py:playwright_mcp_url`) com um
 conjunto mínimo de tools de navegação/leitura; `agent/hooks.py` bloqueia, via
-`on_pre_tool_use`, qualquer navegação para fora da allowlist de domínios.
+`on_pre_tool_use`, qualquer navegação para fora da allowlist de domínios. A
+partir do módulo 7, a sessão também tem as tools `salvar_memoria` e `lembrar`
+(`agent/tools/memoria.py`), que gravam e buscam fatos sobre o aluno numa
+coleção própria do Qdrant; `agent/hooks.py` injeta automaticamente, via
+`on_user_prompt_submitted`, as memórias relevantes para cada mensagem.
 Nenhuma outra tool embutida (bash, etc.) é liberada: cada módulo futuro
 habilita explicitamente só o que precisa, em `available_tools`.
 """
@@ -39,7 +43,8 @@ from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
 
 from agent.config import settings
-from agent.hooks import on_pre_tool_use
+from agent.hooks import on_pre_tool_use, on_user_prompt_submitted
+from agent.tools.memoria import criar_tools as criar_tools_memoria
 from agent.tools.rag import criar_tools as criar_tools_rag
 from agent.tools.sandbox import criar_tools as criar_tools_sandbox
 from agent.tools.web import criar_tools as criar_tools_web
@@ -139,6 +144,8 @@ def _tools_liberadas() -> ToolSet:
         .add_custom("ler_pagina_web")
         .add_custom("search_docs")
         .add_custom("run_python")
+        .add_custom("salvar_memoria")
+        .add_custom("lembrar")
     )
     for nome in _TOOLS_PLAYWRIGHT:
         conjunto.add_mcp(f"playwright-{nome}")
@@ -164,6 +171,7 @@ async def _criar_sessao(client: CopilotClient, modelo: str) -> CopilotSession:
             *criar_tools_web(),
             *criar_tools_rag(),
             *criar_tools_sandbox(publicar_imagens=_publicar_imagens_sandbox),
+            *criar_tools_memoria(),
         ],
         # Servidor MCP do Playwright (módulo 6d), rodando em container próprio
         # (docker-compose.yml, serviço mcp-playwright). "tools" aqui restringe,
@@ -177,7 +185,10 @@ async def _criar_sessao(client: CopilotClient, modelo: str) -> CopilotSession:
                 "tools": _TOOLS_PLAYWRIGHT,
             }
         },
-        hooks={"on_pre_tool_use": on_pre_tool_use},
+        hooks={
+            "on_pre_tool_use": on_pre_tool_use,
+            "on_user_prompt_submitted": on_user_prompt_submitted,
+        },
         # Nenhuma tool embutida além da skill (bash, etc.) fica disponível ainda;
         # os módulos seguintes liberam o resto explicitamente, uma de cada vez.
         available_tools=_tools_liberadas(),

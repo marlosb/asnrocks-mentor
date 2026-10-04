@@ -1,13 +1,14 @@
-"""Testes dos hooks de segurança da sessão (módulo 6d)."""
+"""Testes dos hooks da sessão: bloqueio de tools (módulo 6d) e memória (módulo 7)."""
 
 from __future__ import annotations
 
 from datetime import UTC, datetime
+from unittest.mock import AsyncMock, patch
 
 import pytest
-from copilot.session import PreToolUseHookInput
+from copilot.session import PreToolUseHookInput, UserPromptSubmittedHookInput
 
-from agent.hooks import on_pre_tool_use
+from agent.hooks import on_pre_tool_use, on_user_prompt_submitted
 
 
 def _hook_input(nome_tool: str, tool_args: object) -> PreToolUseHookInput:
@@ -76,3 +77,38 @@ async def test_funciona_com_prefixo_do_servidor_mcp() -> None:
 
     assert resultado is not None
     assert resultado["permissionDecision"] == "deny"
+
+
+def _prompt_input(prompt: str) -> UserPromptSubmittedHookInput:
+    return {
+        "sessionId": "teste",
+        "timestamp": datetime.now(UTC),
+        "workingDirectory": ".",
+        "prompt": prompt,
+    }
+
+
+@pytest.mark.asyncio
+async def test_ignora_prompt_vazio() -> None:
+    resultado = await on_user_prompt_submitted(_prompt_input("   "), {})
+
+    assert resultado is None
+
+
+@pytest.mark.asyncio
+async def test_nao_injeta_contexto_sem_memorias_relevantes() -> None:
+    with patch("agent.hooks.buscar_memorias_relevantes", AsyncMock(return_value=[])):
+        resultado = await on_user_prompt_submitted(_prompt_input("oi, tudo bem?"), {})
+
+    assert resultado is None
+
+
+@pytest.mark.asyncio
+async def test_injeta_memorias_relevantes_como_contexto() -> None:
+    memorias = [{"fato": "está estudando overfitting", "tipo": "progresso"}]
+    with patch("agent.hooks.buscar_memorias_relevantes", AsyncMock(return_value=memorias)):
+        resultado = await on_user_prompt_submitted(_prompt_input("o que eu estava vendo?"), {})
+
+    assert resultado is not None
+    assert "está estudando overfitting" in resultado["additionalContext"]
+    assert "[progresso]" in resultado["additionalContext"]
