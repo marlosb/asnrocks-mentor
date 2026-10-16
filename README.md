@@ -51,6 +51,30 @@ As regras e convenções do projeto estão em `.github/copilot-instructions.md`.
 
 ## Como rodar
 
+### Windows com PowerShell
+
+Com Python 3.12+, `uv` e Docker Desktop instalados e o Docker em execução,
+rode os comandos abaixo na raiz do projeto:
+
+```powershell
+uv sync
+Copy-Item .env.example .env
+# Edite .env com o endpoint, a chave e os nomes dos modelos no Microsoft Foundry.
+
+.\scripts\start-agent.ps1 -SecretsFile .\.env -Reload
+```
+
+O script carrega as variáveis do arquivo indicado, sobe Qdrant, sandbox e
+Playwright MCP via Docker Compose e inicia a API e o frontend localmente.
+Abra `http://localhost:8000`. Ao encerrar o script, ele para os três serviços auxiliares.
+
+Por padrão, `.\scripts\start-agent.ps1` lê `secrets.txt` na raiz do projeto.
+Use `-SecretsFile` para indicar outro arquivo no formato `CHAVE=valor`,
+`-Port 8001` para alterar a porta e `-Reload` para habilitar recarga automática.
+Mantenha os arquivos de segredos fora do controle de versão.
+
+### Execução manual
+
 ```bash
 # Instalar dependências
 uv sync
