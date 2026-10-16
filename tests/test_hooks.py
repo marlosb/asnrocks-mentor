@@ -31,6 +31,41 @@ async def test_permite_navegacao_para_dominio_na_allowlist() -> None:
 
 
 @pytest.mark.asyncio
+@pytest.mark.parametrize(
+    "url",
+    [
+        "https://bcb.gov.br/",
+        "https://www.bcb.gov.br/",
+        "https://api.bcb.gov.br/",
+    ],
+)
+async def test_permite_navegacao_para_banco_central(url: str) -> None:
+    entrada = _hook_input("playwright-browser_navigate", {"url": url})
+
+    resultado = await on_pre_tool_use(entrada, {})
+
+    assert resultado is None
+
+
+@pytest.mark.asyncio
+@pytest.mark.parametrize(
+    "url",
+    [
+        "https://bcb.gov.br.exemplo.com/",
+        "https://falsobcb.gov.br/",
+        "https://www.outro.gov.br/",
+    ],
+)
+async def test_bloqueia_dominios_fora_do_banco_central(url: str) -> None:
+    entrada = _hook_input("playwright-browser_navigate", {"url": url})
+
+    resultado = await on_pre_tool_use(entrada, {})
+
+    assert resultado is not None
+    assert resultado["permissionDecision"] == "deny"
+
+
+@pytest.mark.asyncio
 async def test_bloqueia_navegacao_para_dominio_fora_da_allowlist() -> None:
     entrada = _hook_input("browser_navigate", {"url": "https://exemplo-malicioso.com/"})
 

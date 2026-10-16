@@ -63,7 +63,7 @@ class Settings(BaseSettings):
     dominios_permitidos_navegador: str = (
         "wikipedia.org,python.org,pypi.org,github.com,raw.githubusercontent.com,"
         "scikit-learn.org,pytorch.org,numpy.org,pandas.pydata.org,matplotlib.org,"
-        "developer.mozilla.org,stackoverflow.com"
+        "developer.mozilla.org,stackoverflow.com,bcb.gov.br"
     )
 
     # Diretório de dados do runtime do Copilot SDK (sessões, config, etc.).
